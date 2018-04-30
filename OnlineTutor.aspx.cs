@@ -49,7 +49,7 @@ namespace VirtualClassroom_final.UI
 
         protected void btnShowTeacherProfile_Click(object sender, EventArgs e)
         {
-
+            string id=grdvwShowTeachers.items[0].tostring();
         }
     }
 }
