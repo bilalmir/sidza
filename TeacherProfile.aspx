@@ -24,15 +24,7 @@
                                  <asp:Label ID="lblteacherqualification4" runat="server" CssClass="label label-info"></asp:Label>
                             </div>
                          </div>
-                          <div>
-                              <span class="label label-primary">Subject Taught: </span>
-                             <div>
-                                 <asp:Label ID="lblteachersubject1" runat="server" CssClass="label label-info"></asp:Label><br />
-                                 <asp:Label ID="Label2" runat="server" CssClass="label label-info"></asp:Label><br />
-                                 <asp:Label ID="Label3" runat="server" CssClass="label label-info"></asp:Label><br />
-                                 <asp:Label ID="Label4" runat="server" CssClass="label label-info"></asp:Label>
-                            </div>
-                         </div>
+                          
                          <div>
                              <span class="label label-primary">Contact Details: </span>
                              <div class="form-inline">
