@@ -11,7 +11,10 @@ namespace VirtualClassroom_final.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(session["email"]!=null)
+            {
+              lblusername.text="welcome" + t1.text;
+            }
         }
     }
 }
