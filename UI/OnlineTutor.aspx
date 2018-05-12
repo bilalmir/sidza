@@ -83,7 +83,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" >
         <div class="col-md-8 col-md-offset-2" id="showprofile" runat="server" visible="false">        
             <asp:GridView ID="grdvwShowTeachers" runat="server" CaptionAlign="Top" PageSize="10" AllowPaging="true" CssClass="table table-responsive"
                 AutoGenerateColumns="False" Height="100px" BackColor="White"  CellPadding="3"

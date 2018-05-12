@@ -1,8 +1,17 @@
 ﻿<%@ Page Title="SIDZA-Home Page" Language="C#" MasterPageFile="~/UI/Home.Master" AutoEventWireup="true"
      MetaKeywords="online learning,online education,learning portal,CBSE learning,JKBOSE learning" CodeBehind="LogRegister.aspx.cs" Inherits="VirtualClassroom_final.UI.LogRegister" %>
  <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   <%--    <link rel="Stylesheet" href="../Styles/Site.css" />
-    <link rel="stylesheet" type="text/css" href="../Scripts/engine2/style.css" />--%>
+  <script type="text/javascript" src="../Scripts/jquery-1.9.js"></script> 
+      <script src="../Scripts/bootstrap.min.js"></script>
+
+      <%--    <link rel="Stylesheet" href="../Styles/Site.css" />
+    <link rel="stylesheet" type="text/css" href="../Scripts/engine2/style.css" />--
+     
+      <script type="text/javascript">
+          $(document) {
+              $('#lnkMyteacher').show();
+          });
+      </script> --%> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div class="row" style="margin-top:50px;">
@@ -115,7 +124,7 @@
                
            </div>    
         </nav>
-         <h6>Designed, Developed and Maintained By: <a href="#">Peace4solutions</a></h6>
+         <h6>Designed, Developed and Maintained By: <a href="#">Peace4solutions </a></h6>
        </div>    
 </div>                  
   </asp:Content>

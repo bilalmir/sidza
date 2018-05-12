@@ -43,7 +43,15 @@
               }
           });
       });
-    </script>
+       </script>
+    <%--  <script type="text/javascript">
+          $(window).ready(function () {
+              if ($('#hdnlinks').val == "true")
+              { $('#lnkMyteacher').show(); alert("run sucessfully"); }
+          });
+     
+      </script> 
+   --%>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#lnkadmin').click(function () {
@@ -51,6 +59,7 @@
             });
         });
     </script>
+      
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -61,7 +70,8 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 ">
       <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>  
-        <asp:HiddenField ID="hdnloginfo" runat="server" />  
+        <asp:HiddenField ID="hdnloginfo" runat="server" /> 
+        <asp:HiddenField ID="hdnlinks" runat="server" />          
      <nav class="navbar navbar-default navbar-fixed-top">
           <div class="navbar-inner">                      
               <button type="button" class="navbar-toggle" data-target="#menubar" data-toggle="collapse">                 
@@ -89,6 +99,7 @@
                         </li>
                     <li><a href="takeexam.aspx" style="color:white;" ID="lnkExam" runat="server"><span class="glyphicon glyphicon-edit"></span> Take Test</a></li>
                     <li><a href="OnlineTutor.aspx" style="color:white;" ID="lnkOnlineTutors" runat="server"><span class="glyphicon glyphicon-edit"></span> Online Tutor</a></li>
+                    <li><a href="#" style="color:white;" ID="lnkMyteacher" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Teachers</a></li>
                     </ul>
                     <ul class="nav navbar-nav pull-right" style="font-size:16px;">
                        <li>
@@ -155,6 +166,10 @@
                           </div>
                                                                   
                     </li>
+                        <li>
+                            <a href="StudentProfile.aspx" id="lnkMyProfile"  visible="false" style="color:white;" runat="server">
+                                   <span class="glyphicon glyphicon-user"></span>My Profile</a>
+                        </li> 
                    <li>                                 
                        <a href="#" id="lnklogout" data-target="#signout" data-toggle="modal" data-backdrop="false" visible="false" style="color:white;" runat="server">
                                    <span class="glyphicon glyphicon-off"></span>Sign Out</a>
@@ -176,7 +191,8 @@
                                            </div>
                                         </div>
                         </div>    
-                      </li>                                                     
+                      </li>
+                                                                            
                              
                 </ul>
                  </div>   

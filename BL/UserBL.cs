@@ -29,9 +29,19 @@ namespace Logic.BL
         {
             return UserDL.fetchFeedback();
         }
+        
+        /// /// <summary>
+        /// Author : Bhat javid
+
+        /// Remark : Call to fetch Data of Student For the Student Profile.... 
+        /// <returns></returns>
+        public static DataTable FetchStudata(string StEmail)
+        {
+            return UserDL.FetchStudata(StEmail);
+        }
         /// <summary>
         /// Author : Mir Bilal 
-     
+
         /// Remark : Call to fetch email to check wheather a particular user with the particular email exists.. 
         /// <returns></returns>
         public static bool Fetchemail(string email)
@@ -61,7 +71,7 @@ namespace Logic.BL
         public static bool RegisterTeacher(string name, string email, long contact, string password, string subject, string qualification1, string qualification2, string qualification3, string path)
         {
             string encryptpass = Encrypt.EncryptPassword(password);
-            return UserDL.RegisterTeacher(name, email, contact, subject, qualification1, qualification2, qualification3, password, path);
+            return UserDL.RegisterTeacher(name, email, contact, encryptpass, subject, qualification1, qualification2, qualification3, path);
         }
 
         public static bool SaveQuery(string name, string email, string contact,string message)

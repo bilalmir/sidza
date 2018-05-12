@@ -50,7 +50,7 @@ namespace VirtualClassroom_final.UI
                 if (UserBL.Fetchemail(txtemail.Text))
                 {
 
-                    if (UserBL.RegisterTeacher(name, email, contact, subject, qualification1, qualification2, qualification3, password, path))
+                    if (UserBL.RegisterTeacher(name, email, contact, password,subject,qualification1, qualification2, qualification3, path))
                     {
                         StringBuilder sb = new StringBuilder();
                         //sb.Append("<img src='../img/logo.jpg' height='180' width='150' /><br>");

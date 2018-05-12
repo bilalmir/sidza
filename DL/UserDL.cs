@@ -388,12 +388,43 @@ namespace Logic.DL
                 con.Close();
             }
         }
-
-        /// <summary>
-        /// Author : Mir Bilal
       
-        /// Remark : insert random number in the random field of the particular user who clicked on the forgot password link.
+
+        
+        /// Author : Bhat Javid
+
+        /// Remark : Fetching Student data for the page student Profile
         /// </summary>
+          public static  DataTable FetchStudata(String StuEmail)
+            { 
+               SqlConnection con = new SqlConnection(DB.GetConnection());
+             try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * from dbo.[user] where dbo.[user].email ='" + StuEmail+"'", con);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                return ds.Tables[0];
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+             
+            }
+          /// <summary>
+          /// Author : Mir Bilal
+
+          /// Remark : insert random number in the random field of the particular user who clicked on the forgot password link.
+          /// </summary>
+          ///  /// <summary>
         public static void InsertRandomNumber(int random, string email)
         {
             SqlConnection con = new SqlConnection(DB.GetConnection());
