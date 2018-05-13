@@ -33,7 +33,7 @@ namespace VirtualClassroom_final.UI
                         title = title.Remove(title.Length - 4);
                         int typeid = Convert.ToInt32(NewArticle.Rows[i][1]);
                         string status = NewArticle.Rows[i][6].ToString();
-                        
+
                         if (typeid == 2)
                         {                          
                             str = "<img src='../img/new1.gif' />&nbsp;<a href='/UI/Articles.aspx?artid=" + filename + "' style='color:navy;'>" + title + "</a><br />";                                                         

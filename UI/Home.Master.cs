@@ -13,7 +13,6 @@ using System.Web.Security;
 using Newtonsoft;
 using Newtonsoft.Json;
 using log4net;
-using System.Windows.Forms;
 
 
 
@@ -22,24 +21,18 @@ namespace VirtualClassroom_final.UI
     public partial class Home : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {  
+        {
             Response.Cache.SetNoStore();
             Response.ClearHeaders();
             Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
             Response.AddHeader("Pragma", "no-cache");
-            
             //Session["email"] = txtmail.Text; //forgot password mail
             if (!IsPostBack)
             {
                 try
                 {
                     if (Session["email"] != null)
-                    {
-                        if (Session["StuSighInStatus"].ToString() == "true")
-                        {
-                            lnkMyteacher.Visible = true;
-                            lnkMyProfile.Visible = true;
-                        }
+                    {                      
                         lnklogout.Visible = true;
                         lblloginStatus.Text = "Hi! " + Session["email"].ToString();                     
                         lnklogin.Visible = false;
@@ -79,12 +72,8 @@ namespace VirtualClassroom_final.UI
                             dtprivilege = UserBL.FetchUserPrivileges(roleid);
                             Session.Add("privilege", dtprivilege);                          
                             Session["email"] = dtuser.Rows[0][0].ToString();
-                            Session["TeachSighInStatus"] = "true";
-                            hdnloginfo.Value = txtloginmail.Text;                            
+                            hdnloginfo.Value = txtloginmail.Text;                          
                             Response.Redirect("~/UI/LogRegister.aspx",false);
-                          
-                            
-                             
                         }
                         if (Convert.ToInt32(dtuser.Rows[0][2].ToString()) == 1)    //Student
                         {
@@ -92,11 +81,9 @@ namespace VirtualClassroom_final.UI
                             dtprivilege = UserBL.FetchUserPrivileges(roleid);
                             Session.Add("privilege", dtprivilege);                          
                             Session["email"] = dtuser.Rows[0][0].ToString();
-                            Session["StuSighInStatus"] = "true";
-                            hdnloginfo.Value = txtloginmail.Text;                          
+                            hdnloginfo.Value = txtloginmail.Text;                           
                             Response.Redirect("~/UI/LogRegister.aspx",false);
-  
-                         }
+                        }
                     }
                     else if (Convert.ToInt32(dtuser.Rows[0][3].ToString()) == 1)
                     {
@@ -224,7 +211,7 @@ namespace VirtualClassroom_final.UI
             Session["email"] = null;
             Session["pageredirect"] = null;
             Session.Abandon();
-            Response.Redirect("~/UI/LogRegister.aspx",true);
+            Response.Redirect(Request.RawUrl);
 
         }
 

@@ -17,7 +17,6 @@
          <div class="row" style="margin-top:50px;">   
    <div class="col-md-8 col-md-offset-2">       
        <div class="modal-dialog">
-           <a href="ViewMaterial_files/">ViewMaterial_files/</a>
            <div class="modal-content">
                <div class="modal-header">
                     <h3 class="modal-title">Tutor Registration</h3> 

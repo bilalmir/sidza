@@ -1,17 +1,8 @@
 ﻿<%@ Page Title="SIDZA-Home Page" Language="C#" MasterPageFile="~/UI/Home.Master" AutoEventWireup="true"
      MetaKeywords="online learning,online education,learning portal,CBSE learning,JKBOSE learning" CodeBehind="LogRegister.aspx.cs" Inherits="VirtualClassroom_final.UI.LogRegister" %>
  <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <script type="text/javascript" src="../Scripts/jquery-1.9.js"></script> 
-      <script src="../Scripts/bootstrap.min.js"></script>
-
-      <%--    <link rel="Stylesheet" href="../Styles/Site.css" />
-    <link rel="stylesheet" type="text/css" href="../Scripts/engine2/style.css" />--
-     
-      <script type="text/javascript">
-          $(document) {
-              $('#lnkMyteacher').show();
-          });
-      </script> --%> 
+   <%--    <link rel="Stylesheet" href="../Styles/Site.css" />
+    <link rel="stylesheet" type="text/css" href="../Scripts/engine2/style.css" />--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div class="row" style="margin-top:50px;">
@@ -24,7 +15,7 @@
                          </div>                        
                 </div>     
                <div class="col-md-6 ">
-               <div id="myCarousel" class="carousel slide img-rounded" data-ride="carousel" style="height:362px;width:700px;">
+               <div id="myCarousel" class="carousel slide img-responsive img-rounded" data-ride="carousel" style="height:362px;width:700px;">
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                   <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -32,7 +23,7 @@
                   <li data-target="#myCarousel" data-slide-to="3"></li>
                   <li data-target="#myCarousel" data-slide-to="4"></li>
                 </ol>
-                <div class="carousel-inner  img-rounded" style="height:362px;width:700px;">
+                <div class="carousel-inner  img-responsive img-rounded" style="height:362px;width:700px;">
                   <div class="item active">
                     <img src="../img/1.jpg" class="img-responsive img-rounded" alt="">                  
                   </div>
@@ -70,7 +61,9 @@
              <div class="well-lg" style="background-color:forestgreen;">
                <p style="font-size:25px;color:white;text-align:center">DOWNLOAD STUDY MATERIAL HERE</p>
              </div>
-             <div class="" style="background-color:forestgreen;">           
+         </div>
+         <div class="col-md-7 col-md-offset-3">
+             <div class="text-center text-justify" style="background-color:forestgreen;">           
                   <ul class="nav navbar-nav well-lg">
                     <li><a href="studymaterial.aspx" runat="server" class="img-rounded" style="font-size:large;color:white;background-color:forestgreen;"><span class="glyphicon glyphicon-book"></span> CLASS 12th</a></li>
                     <li><a class="divider"></a></li>
@@ -124,7 +117,7 @@
                
            </div>    
         </nav>
-         <h6>Designed, Developed and Maintained By: <a href="#">Peace4solutions </a></h6>
+         <h6>Designed, Developed and Maintained By: <a href="#">Peace4solutions</a></h6>
        </div>    
 </div>                  
   </asp:Content>

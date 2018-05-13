@@ -2,30 +2,6 @@
     MetaKeywords="CBSE subjects,JKBOSE subjects,science,physics,chemistry,biology,mathematics,material,9th,10th,11th,12th,subjects,textual material,study material" 
       CodeBehind="ViewMaterial.aspx.cs" Inherits="VirtualClassroom_final.UI.ViewMaterial" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<%--    <script type="text/javascript">
-        function seturl (title) {
-            var name = '';
-            name = document.getElementById('<%= hdnfilename.ClientID%>').value; 
-            //alert(name);
-           // alert(title);
-            if (history.pushState) {
-                //var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + name;
-                //window.history.replaceState({ path: newurl }, '', '');
-                //window.history.replaceState({ path: newurl }, '', newurl);
-                
-                window.history.pushState(null, null, window.location.pathname+name);
-            }
-            //var url = name;
-            //if (typeof (history.pushState) != "undefined") {
-            //    var obj = { Title: title, Url: url };
-            //    history.replaceState(obj, obj.Title,obj.Url);
-            //    //alert(obj.Title+" "+obj.Url);
-            //}
-            //else {
-            //    alert("Browser does not support HTML5.");
-            //}
-        }   
-    </script>--%>
   <script>
       function resizeIframe(obj) {
           obj.style.height = 0;

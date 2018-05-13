@@ -11,6 +11,7 @@ namespace VirtualClassroom_final.UI
 {
     public partial class TeacherRegistration : System.Web.UI.Page
     {
+        Boolean DeleteStatus;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -50,8 +51,9 @@ namespace VirtualClassroom_final.UI
                 if (UserBL.Fetchemail(txtemail.Text))
                 {
 
-                    if (UserBL.RegisterTeacher(name, email, contact, password,subject,qualification1, qualification2, qualification3, path))
+                    if (UserBL.RegisterTeacher(name, email, contact, subject, qualification1, qualification2, qualification3, password, path,address))
                     {
+                        DeleteStatus = false;
                         StringBuilder sb = new StringBuilder();
                         //sb.Append("<img src='../img/logo.jpg' height='180' width='150' /><br>");
                         sb.Append("Dear '" + txtname.Text.Trim() + "'<br/>");
@@ -81,9 +83,10 @@ namespace VirtualClassroom_final.UI
                 }
                 else
                 {
+                   
                     if (path != "")
                     {
-                        System.IO.File.Delete(path);
+                       System.IO.File.Delete(path);
                     }
                     ClientScript.RegisterStartupScript(this.GetType(), "Information", "<script type='text/javascript'>alert('Email already in use. Please try a different one');</script>");
                 }
@@ -99,9 +102,22 @@ namespace VirtualClassroom_final.UI
         protected void btnUploadProfilepic_Click(object sender, EventArgs e)
         {
             // string path = flupImage.FileName;
-            flupImage.SaveAs(Server.MapPath("/img/") + flupImage.FileName);
+            flupImage.SaveAs(Server.MapPath("/Upload/Profile pics/") + flupImage.FileName);
             imgProfile.Src = "/img/" + flupImage.FileName;
-            Session["profileimage"] = "/img/" + flupImage.FileName;
+            Session["profileimage"] = "/Upload/Profile pics/" + flupImage.FileName;
+            DeleteStatus = true;
+        }
+        protected void Page_UnLoad(object sender,EventArgs e)
+        {
+            try
+            {
+
+                if (DeleteStatus == true)
+                {
+                    System.IO.File.Delete(Session["profileimage"].ToString());
+                }
+            }
+            catch (Exception) { }
         }
     }
 }

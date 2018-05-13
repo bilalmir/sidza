@@ -49,15 +49,6 @@ namespace VirtualClassroom_final.UI {
         protected global::System.Web.UI.WebControls.HiddenField hdnloginfo;
         
         /// <summary>
-        /// hdnlinks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnlinks;
-        
-        /// <summary>
         /// lnkExam control.
         /// </summary>
         /// <remarks>
@@ -74,15 +65,6 @@ namespace VirtualClassroom_final.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkOnlineTutors;
-        
-        /// <summary>
-        /// lnkMyteacher control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkMyteacher;
         
         /// <summary>
         /// lnklogin control.
@@ -200,15 +182,6 @@ namespace VirtualClassroom_final.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnforgotpass;
-        
-        /// <summary>
-        /// lnkMyProfile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkMyProfile;
         
         /// <summary>
         /// lnklogout control.

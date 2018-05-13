@@ -55,7 +55,21 @@ namespace VirtualClassroom_final.UI
 
         protected void btnShowTeacherProfile_Click(object sender, EventArgs e)
         {
+            
+           
 
+        }
+
+        protected void grdvwShowTeachers_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "showprofile")
+            {
+                int rowindex = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = grdvwShowTeachers.Rows[rowindex];
+                Label userid = (Label)row.FindControl("lbluserid");
+                Session["userid"] =Convert.ToInt32(userid.Text);
+                Response.Redirect("~/UI/TeacherProfile.aspx");
+            }
         }
     }
 }
