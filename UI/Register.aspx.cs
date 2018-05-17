@@ -16,6 +16,7 @@ namespace VirtualClassroom_final.UI
 {
     public partial class Register : System.Web.UI.Page
     {
+        Boolean DeleteStatus;
         protected void Page_Load(object sender, EventArgs e)
         {
             //Response.ClearHeaders();
@@ -31,8 +32,7 @@ namespace VirtualClassroom_final.UI
                 ddlclass.Items.Insert(0, new ListItem("-Select Class-", "0"));
                
             }
-            flupImage.Attributes["onchange"] = "UploadFile(this)";
-           
+            flupImage.Attributes["onchange"] = "UploadFile(this)";          
          
         }
         protected void btnregister_Click(object sender, EventArgs e)
@@ -55,6 +55,7 @@ namespace VirtualClassroom_final.UI
                 {                   
                         if (UserBL.RegisterStudent(txtname.Text, txtemail.Text, classid, txtpass.Text.Trim(), txtBoard.Text.Trim(), path))
                         {
+                            DeleteStatus = true;
                             StringBuilder sb = new StringBuilder();
                             // sb.Append("<img src='../img/logo.jpg' height='150' width='200' /><br/>");
                             sb.Append("Dear '" + txtname.Text.Trim() + "'<br/>");
@@ -101,11 +102,22 @@ namespace VirtualClassroom_final.UI
         protected void btnUploadProfilepic_Click(object sender, EventArgs e)
         {
            // string path = flupImage.FileName;
-            flupImage.SaveAs(Server.MapPath("/img/") + flupImage.FileName);
+            flupImage.SaveAs(Server.MapPath("/Upload/Profile pics/") + flupImage.FileName);
             imgProfile.Src = "/img/" + flupImage.FileName;
-            Session["profileimage"] = "/img/" + flupImage.FileName;
+            Session["profileimage"] = "/Upload/Profile pics/" + flupImage.FileName;
+            DeleteStatus = true;
         }    
-
+        protected void Page_UnLoad(object sender,EventArgs e)
+        {
+            try
+            {
+                if (DeleteStatus == true)
+                {
+                    System.IO.File.Delete(Session["profileimage"].ToString());
+                }
+            }
+            catch (Exception) { }
+        }
 
     }
 }

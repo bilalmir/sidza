@@ -83,17 +83,17 @@
             </div>
         </div>
     </div>
-    <div class="row" >
+    <div class="row">
         <div class="col-md-8 col-md-offset-2" id="showprofile" runat="server" visible="false">        
             <asp:GridView ID="grdvwShowTeachers" runat="server" CaptionAlign="Top" PageSize="10" AllowPaging="true" CssClass="table table-responsive"
                 AutoGenerateColumns="False" Height="100px" BackColor="White"  CellPadding="3"
-                CellSpacing="2" GridLines="None"  OnPageIndexChanging="grdvwShowTeachers_PageIndexChanging"
-                EmptyDataText="There is no material available">
+                CellSpacing="2" GridLines="None"  OnPageIndexChanging="grdvwShowTeachers_PageIndexChanging" OnRowCommand="grdvwShowTeachers_RowCommand"
+                EmptyDataText="There are no tutors available">
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
-                    <asp:TemplateField HeaderStyle-CssClass="invisible" ItemStyle-CssClass="invisible">
+                    <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Label ID="lbluserid"  runat="server" Text='<%# Eval("id") %>'></asp:Label>
+                            <asp:Label ID="lbluserid" style="display:none;" runat="server" Text='<%# Eval("id") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                      <asp:TemplateField>
@@ -109,15 +109,14 @@
                     </asp:TemplateField>
                      <asp:TemplateField ItemStyle-CssClass="text-center">
                                  <ItemTemplate>
-                           <asp:Button ID="btnShowTeacherProfile" runat="server" Text="View Profile" CssClass="btn btn-success form-control" OnClick="btnShowTeacherProfile_Click" />
+                           <asp:Button ID="btnShowTeacherProfile" runat="server" CommandName="showprofile" CommandArgument="<%# Container.DataItemIndex %>" Text="View Profile" CssClass="btn btn-success form-control" />
                         </ItemTemplate>
                     </asp:TemplateField>                    
                 </Columns>
                 <EmptyDataRowStyle BackColor="#eeeeee" BorderColor="Black"
                     BorderStyle="Solid" BorderWidth="1px" Font-Size="Large" ForeColor="#851010"
                     HorizontalAlign="Center" />
-                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                <HeaderStyle BackColor="#851010" Font-Bold="True" ForeColor="White" />
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />           
                 <PagerStyle BackColor="#851010" ForeColor="Black" HorizontalAlign="Center" />
                 <RowStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Center" />
                 <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
