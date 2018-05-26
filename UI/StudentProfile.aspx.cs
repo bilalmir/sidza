@@ -19,14 +19,19 @@ namespace VirtualClassroom_final.UI
                 DataTable Stu_dt = new DataTable();
                 string StuEmail = Session["email"].ToString();
                 Stu_dt = UserBL.FetchStudata(StuEmail);
-                imgStu.Src = Stu_dt.Rows[0].ItemArray[13].ToString();
                 lblName.Text = Stu_dt.Rows[0].ItemArray[1].ToString();
                 lblEmail.Text = Stu_dt.Rows[0].ItemArray[2].ToString();
                 lblBoard.Text = Stu_dt.Rows[0].ItemArray[12].ToString();
                 lblContact.Text = Stu_dt.Rows[0].ItemArray[3].ToString();
+               //string pro = Session["profileImage"].ToString(); 
+               // MessageBox.Show(pro);
+                if (Session["profileImage"].ToString() != "" && Session["profileImage"].ToString() != null)
+                { imgStu.Src = Stu_dt.Rows[0].ItemArray[13].ToString(); MessageBox.Show(imgStu.Src.ToString()); }
+                else { imgStu.Src = "../img/profile.png"; }
             }
             else { Response.Redirect("~/UI/LogRegister.aspx", false); }
 
         }
+       
     }
 }

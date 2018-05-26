@@ -15,10 +15,10 @@ namespace VirtualClassroom_final.UI
         {
             if (!IsPostBack)
             {
-                if (Session["email"] != null)
+                if (Session["email"] != null && Session["TeachSighInStatus"].ToString() == "true")
                 {
                     divRegistrationDialog.Visible = false;
-                  
+                    divsearchTeacher.Visible = false;
                 }
                
                 drpSearchTeacher.DataSource = UserBL.FetchTutorSubject();                // fetch classes for dropdown (class)

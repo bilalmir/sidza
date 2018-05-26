@@ -58,12 +58,12 @@ namespace VirtualClassroom_final.UI {
         protected global::System.Web.UI.WebControls.Label lblContact;
         
         /// <summary>
-        /// btnEditProfile control.
+        /// lnkChangePic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditProfile;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkChangePic;
     }
 }

@@ -33,7 +33,7 @@
                    <div class="modal-footer">
                  
                        <div>
-                     <asp:Button  id="btnEditProfile" runat="server" Text="Edit Profile" CssClass="btn btn-success form-control"/>
+                           <a href="StuEditProfile.aspx" style="color:green;" ID="lnkChangePic" runat="server" Font-Bold="true"> <span> Edit Profile </span > </a>
                         </div>
                    </div>
                              

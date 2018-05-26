@@ -10,7 +10,7 @@
 namespace VirtualClassroom_final.UI {
     
     
-    public partial class WebForm1 {
+    public partial class MyTeachers {
         
         /// <summary>
         /// showprofile control.

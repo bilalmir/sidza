@@ -73,7 +73,7 @@
              </div>
       </div>    
   </div>
-    <div class="row">
+    <div class="row" id="divsearchTeacher" runat="server">
         <div class="col-md-6 col-md-offset-3">
             <div><h1 style="text-align:center;">Choose from our online tutors</h1></div>
             <div class="form-inline form-group">

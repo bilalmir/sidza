@@ -1,15 +1,17 @@
-﻿using Logic.BL;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Logic;
+using System.Data;
+using Logic.BL;
+
 
 namespace VirtualClassroom_final.UI
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class MyTeachers : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +22,6 @@ namespace VirtualClassroom_final.UI
         {
 
         }
-
         protected void grdvwMyTeachers_SelectedIndexChanged(object sender, EventArgs e)
         {
 

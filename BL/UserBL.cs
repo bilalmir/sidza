@@ -29,9 +29,19 @@ namespace Logic.BL
         {
             return UserDL.fetchFeedback();
         }
+        
+        /// /// <summary>
+        /// Author : Bhat javid
+
+        /// Remark : Call to fetch Data of Student For the Student Profile.... 
+        /// <returns></returns>
+        public static DataTable FetchStudata(string StEmail)
+        {
+            return UserDL.FetchStudata(StEmail);
+        }
         /// <summary>
         /// Author : Mir Bilal 
-     
+
         /// Remark : Call to fetch email to check wheather a particular user with the particular email exists.. 
         /// <returns></returns>
         public static bool Fetchemail(string email)
@@ -65,10 +75,10 @@ namespace Logic.BL
             return UserDL.RegisterStudent(name, email,classid, encryptpass,board,image);
         }
 
-        public static bool RegisterTeacher(string name, string email, long contact, string subject, string qualification1, string qualification2, string qualification3, string password, string path, string address)
+        public static bool RegisterTeacher(string name, string email, long contact, string password, string subject, string qualification1, string qualification2, string qualification3, string path)
         {
             string encryptpass = Encrypt.EncryptPassword(password);
-            return UserDL.RegisterTeacher(name, email, contact, subject, qualification1, qualification2, qualification3, password, path,address);
+            return UserDL.RegisterTeacher(name, email, contact, encryptpass, subject, qualification1, qualification2, qualification3, path);
         }
 
         public static bool SaveQuery(string name, string email, string contact,string message)
@@ -103,8 +113,19 @@ namespace Logic.BL
         {
             UserDL.SetLock(email);
         }
+        //-------Update Profile-------------------------------------------------------------
 
+        /// <summary>
+        /// Author : Bhat Javid
 
+        ///  Remarks : Description: Submit event fired to Update Profile Of Existing Users.
+        /// </summary>
+
+        public static bool UpdateStudent(string name, string Contact, int classid, string password, string board, string image,string Email)
+        {
+            string encryptpass = Encrypt.EncryptPassword(password);
+            return UserDL.UpdateStudent(name,Contact, classid, encryptpass, board, image,Email);
+        }
         //---- FORGOT PASSWORD ---------------------------------------------------------------------------------------------------------
 
 
@@ -368,6 +389,11 @@ namespace Logic.BL
         public static DataSet FetchTeacherProfile(string subject)
         {
             return UserDL.FetchTeacherProfile(subject);
+        }
+
+        public static DataTable FetchStudata(string email)
+        {
+            return UserDL.FetchStudata(email);
         }
         public static DataSet FetchTeacherFullProfile(int userid)
         {

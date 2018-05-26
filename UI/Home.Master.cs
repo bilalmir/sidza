@@ -39,6 +39,8 @@ namespace VirtualClassroom_final.UI
                         {
                             lnkMyteacher.Visible = true;
                             lnkMyProfile.Visible = true;
+                            ProfileLink.Visible = true;
+                            lnkMyseasions.Visible = true;
                         }
                         lnklogout.Visible = true;
                         lblloginStatus.Text = "Hi! " + Session["email"].ToString();                     
@@ -79,7 +81,10 @@ namespace VirtualClassroom_final.UI
                             dtprivilege = UserBL.FetchUserPrivileges(roleid);
                             Session.Add("privilege", dtprivilege);                          
                             Session["email"] = dtuser.Rows[0][0].ToString();
+                            Session["profileImage"] = dtuser.Rows[0][5].ToString();
                             Session["TeachSighInStatus"] = "true";
+                            Session["StuSighInStatus"] = "false";
+							imgProfile.Src = Session["profileImage"].ToString();
                             hdnloginfo.Value = txtloginmail.Text;                            
                             Response.Redirect("~/UI/LogRegister.aspx",false);
                           
@@ -92,7 +97,10 @@ namespace VirtualClassroom_final.UI
                             dtprivilege = UserBL.FetchUserPrivileges(roleid);
                             Session.Add("privilege", dtprivilege);                          
                             Session["email"] = dtuser.Rows[0][0].ToString();
+							Session["profileImage"] = dtuser.Rows[0][5].ToString();
                             Session["StuSighInStatus"] = "true";
+                            Session["TeachSighInStatus"] = "false";
+							imgProfile.Src = dtuser.Rows[0][5].ToString();
                             hdnloginfo.Value = txtloginmail.Text;                          
                             Response.Redirect("~/UI/LogRegister.aspx",false);
   

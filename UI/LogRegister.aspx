@@ -15,15 +15,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div class="row" style="margin-top:50px;">
-       <div class="col-md-12">
-                <div class="col-md-6">    
+       <div class="col-md-12 col-lg-12 col-xs-12">
+                <div class="col-md-6 col-lg-6 col-xs-6">    
                          <div class="img-rounded">
                                <video controls Class="img-responsive img-rounded" poster="/img/poster.jpg" style="height:362px;width:700px;" >
                                       <source src="../Upload/Videos/Introductry Video.mp4" type="video/mp4" />
                                </video>
                          </div>                        
                 </div>     
-               <div class="col-md-6 ">
+               <div class="col-md-6 col-lg-6 col-xs-6">
                <div id="myCarousel" class="carousel slide img-rounded" data-ride="carousel" style="height:362px;width:700px;">
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -54,19 +54,19 @@
        </div>
      </div> 
      <div class="row" style="margin-top:50px;">
-       <div class="col-md-6">
+       <div class="col-md-6 col-lg-6 col-xs-6">
            <div class="img-responsive img-rounded">
                <iframe  width="640" height="360" style="display:block;max-height:100%;max-width:100%" src="https://www.youtube.com/embed/1uuk3qSM__I?&autoplay=0"   frameborder="0" allowfullscreen></iframe>
            </div>
        </div>
-       <div class="col-md-6">
+       <div class="col-md-6 col-lg-6 col-xs-6">
           <div class="img-responsive img-rounded">
               <iframe width="640" height="360" style="display:block;max-height:100%;max-width:100%" src="https://www.youtube.com/embed/R4lt1Ak7X6U?&autoplay=0"  frameborder="0" allowfullscreen></iframe>
           </div>
        </div>
    </div><br />
    <div class="row">
-         <div class="col-md-8 col-md-offset-2">
+         <div class="col-md-8 col-md-offset-2 col-lg-8 col-xs-8 col-lg-offset-2 col-xs-offset-2 ">
              <div class="well-lg" style="background-color:forestgreen;">
                <p style="font-size:25px;color:white;text-align:center">DOWNLOAD STUDY MATERIAL HERE</p>
              </div>
@@ -85,7 +85,7 @@
    </div>  
 <br />
    <div class="row" style="padding-left:20px;" >     
-          <div class="col-md-6 img-rounded" style="height:400px;border-style:solid;border-width:2px;border-color:green;">           
+          <div class="col-md-6 col-md-6 col-lg-6 col-xs-6" img-rounded" style="height:400px;border-style:solid;border-width:2px;border-color:green;">           
               <div class="well-sm">
                   <h3 class="label-success badge"  style="font-size:large;color:white;">ARTICLES</h3>
               </div>
@@ -97,7 +97,7 @@
               </marquee>                                    
           </div>
          
-          <div class="col-md-6 img-rounded" style="height:400px;border-style:solid;border-width:2px;border-color:green;">
+          <div class="col-md-6 col-md-6 col-lg-6 col-xs-6 img-rounded" style="height:400px;border-style:solid;border-width:2px;border-color:green;">
               <div class="well-sm">
                   <h3 class="label-success badge"  style="font-size:large;color:white">NEWS</h3>
               </div>
@@ -111,7 +111,7 @@
    </div>
     <br />
 <div class="row">
-    <div class="col-md-12 img-rounded">
+    <div class="col-md-12 col-lg-12 col-xs-12 img-rounded">
         <nav class="navbar navbar-default nav-justified">                 
            <div class="navbar-collapse" style="background-color:forestgreen;">               
                   <ul class="nav navbar-nav" style="background-color:forestgreen;font-size:12px;">

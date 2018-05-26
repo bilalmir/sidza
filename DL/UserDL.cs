@@ -112,7 +112,7 @@ namespace Logic.DL
             {
 
                 con.Open();
-                string query = "insert into dbo.[user](name,email,classid,limit,password,lock,roleid,board,profileimage)values(@name,@email,'" + classid + "',0,@password,0,1,@board,@image) ";
+               string query = "insert into dbo.[user](name,email,classid,limit,password,lock,roleid,board,profileimage)values(@name,@email,'" + classid + "',0,@password,0,1,@board,@image) ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@email", email);
@@ -141,14 +141,52 @@ namespace Logic.DL
                 con.Close();
             }
         }
+ /// <summary>
+        /// Description: Submit event fired to Update(Student) Existing Users
 
-        public static bool RegisterTeacher(string name, string email, long contact, string password, string subject, string qualification1, string qualification2, string qualification3, string path,string address)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public static bool UpdateStudent(string name, string contact,  int classid, string password, string board, string image,string Email)
         {
             SqlConnection con = new SqlConnection(DB.GetConnection());
             try
             {
 
                 con.Open();
+                string query = "Update dbo.[user] set name=@name,contact=@contact,password=@password,classid='"+classid+"',board=@board,profileimage=@image where email='"+Email+"'";                    
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@board", board);
+                cmd.Parameters.AddWithValue("@image", image);
+                cmd.Parameters.AddWithValue("@contact", contact);
+                int RowsAffected = cmd.ExecuteNonQuery();
+                if (RowsAffected > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public static bool RegisterTeacher(string name, string email, long contact, string password, string subject, string qualification1, string qualification2, string qualification3, string path,string address)
+        {
+            SqlConnection con = new SqlConnection(DB.GetConnection());
+            try
+            {   
+				con.Open();
                 string query = "insert into dbo.[user](name,email,contact,limit,password,lock,roleid,teacherSubject,qualification1,qualification2,qualification3,profileimage,address)values(@name,@email,'" + contact + "', 0 ,@password,0,1,@subject,@qualification1,@qualification2,@qualification3,@path,@address)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@name", name);
@@ -326,7 +364,7 @@ namespace Logic.DL
 
                                 SqlCommand cmd3 = new SqlCommand("update [user] set [user].limit = 0 , [user].lock = 0 where [user].email='" + email + "'", con);
                                 cmd3.ExecuteNonQuery();
-                                SqlCommand cmd4 = new SqlCommand("select [user].email,[user].password,[user].roleid,[user].limit,verification.isvalid  from [user] left outer join dbo.verification on [user].id=verification.UserId where [user].email='" + email + "' and [user].password='" + password + "' and (isvalid=1 or isnull(isvalid,1)=1)", con);
+                                SqlCommand cmd4 = new SqlCommand("select [user].email,[user].password,[user].roleid,[user].limit,verification.isvalid,[user].profileimage  from [user] left outer join dbo.verification on [user].id=verification.UserId where [user].email='" + email + "' and [user].password='" + password + "' and (isvalid=1 or isnull(isvalid,1)=1)", con);
                                 cmd4.ExecuteNonQuery();
                                 SqlDataAdapter da = new SqlDataAdapter(cmd4);
                                 da.Fill(ds);
@@ -451,8 +489,41 @@ namespace Logic.DL
             {
                 con.Close();
             }
-        }
+        }        
+        /// Author : Bhat Javid
 
+        /// Remark : Fetching Student data for the page student Profile
+        /// </summary>
+          public static  DataTable FetchStudata(String StuEmail)
+            { 
+               SqlConnection con = new SqlConnection(DB.GetConnection());
+             try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * from dbo.[user] where dbo.[user].email ='" + StuEmail+"'", con);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+
+                return ds.Tables[0];
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+             
+            }
+          /// <summary>
+          /// Author : Mir Bilal
+
+          /// Remark : insert random number in the random field of the particular user who clicked on the forgot password link.
+          /// </summary>
+          ///  /// <summary>
         /// <summary>
         /// Author : Mir Bilal
       
@@ -1308,7 +1379,7 @@ namespace Logic.DL
             }
         }
 
-        public static DataSet FetchTeacherFullProfile(int userid)
+  public static DataSet FetchTeacherFullProfile(int userid)
         {
             SqlConnection con = new SqlConnection(DB.GetConnection());
             try
@@ -3330,7 +3401,7 @@ namespace Logic.DL
         //    }
         //    catch (Exception)
         //    {
-       
+        //        throw;
         //    }
         //    finally
         //    {
@@ -4270,6 +4341,31 @@ namespace Logic.DL
             }
 
 
+        }
+
+        public static DataTable FetchStudata(string email)
+        {
+            SqlConnection con = new SqlConnection(DB.GetConnection());
+            try
+            {
+                con.Open();
+                string query = "select * from [user] where [user].email=@email and [user].roleid=1";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@email", email);
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            finally
+            {
+                con.Close();
+            }
         }
 
         public static DataTable FetchStudent(int classid, int subjectid)
