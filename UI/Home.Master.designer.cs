@@ -85,6 +85,15 @@ namespace VirtualClassroom_final.UI {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkMyteacher;
         
         /// <summary>
+        /// lnkMyseasions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkMyseasions;
+        
+        /// <summary>
         /// lnklogin control.
         /// </summary>
         /// <remarks>
@@ -200,6 +209,24 @@ namespace VirtualClassroom_final.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnforgotpass;
+        
+        /// <summary>
+        /// ProfileLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor ProfileLink;
+        
+        /// <summary>
+        /// imgProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgProfile;
         
         /// <summary>
         /// lnkMyProfile control.

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/Home.Master" AutoEventWireup="true" CodeBehind="StuEditProfile.aspx.cs" Inherits="VirtualClassroom_final.UI.WebForm3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/Home.Master" AutoEventWireup="true" CodeBehind="StuEditProfile.aspx.cs" Inherits="VirtualClassroom_final.UI.StuEditProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
  <script type="text/javascript">
         function openfileDialogChange() {

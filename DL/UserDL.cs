@@ -4343,31 +4343,7 @@ namespace Logic.DL
 
         }
 
-        public static DataTable FetchStudata(string email)
-        {
-            SqlConnection con = new SqlConnection(DB.GetConnection());
-            try
-            {
-                con.Open();
-                string query = "select * from [user] where [user].email=@email and [user].roleid=1";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@email", email);
-                DataSet ds = new DataSet();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(ds);
-                return ds.Tables[0];
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-            finally
-            {
-                con.Close();
-            }
-        }
-
+    
         public static DataTable FetchStudent(int classid, int subjectid)
         {
             SqlConnection con = new SqlConnection(DB.GetConnection());

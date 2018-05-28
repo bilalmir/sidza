@@ -177,16 +177,13 @@
                           </div>
                                                                   
                     </li>
-                        <li class="dropdown">
-                             
-                            <a href="#" class="danger" id="ProfileLink"  data-placement="bottom " style="color:white;" runat="server" visible="false">
+                        <li class="dropdown">                             
+                            <a href="#" class="danger" id="ProfileLink"  data-placement="bottom" style="color:white;" runat="server" visible="false">
                             <span ><img src="../img/profile.png" runat="server" id="imgProfile" width="40" height="50" class="img-thumbnail img-responsive" visible="true"/></span><span class="caret"></span></a>
                              <div id="popover_content" style="display: none;">
                             <div class="pull-left img-responsive" >                            
-                                  <a href="StudentProfile.aspx" id="lnkMyProfile"   style="color:green;font-size:16px;" runat="server" class="pull-left">
-                                  <span class="glyphicon glyphicon-user"></span> My Profile</a>
-                                  <a href="#" id="lnklogout" data-target="#signout" data-toggle="modal" data-backdrop="false"  style="color:green;font-size:16px;" runat="server" class="pull-left">
-                                   <span class="glyphicon glyphicon-off"></span>Sign Out </a>
+                                  <a href="StudentProfile.aspx" id="lnkMyProfile"   style="color:green;font-size:16px;" runat="server" class="pull-left"><span class="glyphicon glyphicon-user"></span> My Profile</a>
+                                  <a href="#" id="lnklogout" data-target="#signout" data-toggle="modal" data-backdrop="false"  style="color:green;font-size:16px;" runat="server" class="pull-left"><span class="glyphicon glyphicon-off"></span>Sign Out </a>
                                  <div class="modal fade" id="signout" tabindex="-1">
                                        <div class="modal-dialog">
                                            <div class="modal-content">

@@ -13,10 +13,6 @@ using System.Web.Security;
 using Newtonsoft;
 using Newtonsoft.Json;
 using log4net;
-using System.Windows.Forms;
-
-
-
 namespace VirtualClassroom_final.UI
 {
     public partial class Home : System.Web.UI.MasterPage
@@ -41,6 +37,7 @@ namespace VirtualClassroom_final.UI
                             lnkMyProfile.Visible = true;
                             ProfileLink.Visible = true;
                             lnkMyseasions.Visible = true;
+                            imgProfile.Src = Session["profileImage"].ToString();
                         }
                         lnklogout.Visible = true;
                         lblloginStatus.Text = "Hi! " + Session["email"].ToString();                     
@@ -86,10 +83,7 @@ namespace VirtualClassroom_final.UI
                             Session["StuSighInStatus"] = "false";
 							imgProfile.Src = Session["profileImage"].ToString();
                             hdnloginfo.Value = txtloginmail.Text;                            
-                            Response.Redirect("~/UI/LogRegister.aspx",false);
-                          
-                            
-                             
+                            Response.Redirect("~/UI/LogRegister.aspx",false);                            
                         }
                         if (Convert.ToInt32(dtuser.Rows[0][2].ToString()) == 1)    //Student
                         {
@@ -99,8 +93,7 @@ namespace VirtualClassroom_final.UI
                             Session["email"] = dtuser.Rows[0][0].ToString();
 							Session["profileImage"] = dtuser.Rows[0][5].ToString();
                             Session["StuSighInStatus"] = "true";
-                            Session["TeachSighInStatus"] = "false";
-							imgProfile.Src = dtuser.Rows[0][5].ToString();
+                            Session["TeachSighInStatus"] = "false";                           
                             hdnloginfo.Value = txtloginmail.Text;                          
                             Response.Redirect("~/UI/LogRegister.aspx",false);
   

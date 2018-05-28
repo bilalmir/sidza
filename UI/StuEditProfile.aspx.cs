@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace VirtualClassroom_final.UI
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class StuEditProfile : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,15 +42,18 @@ namespace VirtualClassroom_final.UI
                     lnkUploadPic.Visible = true;
                     if (Stu_dt.Rows[0].ItemArray[13].ToString() != "" && Stu_dt.Rows[0].ItemArray[13].ToString() != null)
                     {
-                        imgProfile.Src =Stu_dt.Rows[0].ItemArray[13].ToString();
+                        imgProfile.Src = Stu_dt.Rows[0].ItemArray[13].ToString();
                         Session["profileimage"] = Stu_dt.Rows[0].ItemArray[13].ToString();
                         lnkChangePic.Visible = true;
                         lnkRemovePic.Visible = true;
                         lnkUploadPic.Visible = false;
                     }
                 }
-                
-                else { Response.Redirect("~/UI/LogRegister.aspx", true); }
+
+                else
+                {
+                    Response.Redirect("~/UI/LogRegister.aspx", true);
+                }
 
             }
             
@@ -68,19 +71,21 @@ namespace VirtualClassroom_final.UI
                 string path = string.Empty;
                 string StuEmail = Session["email"].ToString();
                 int classid = Convert.ToInt32(ddlclass.SelectedValue);
-                if (Session["RemvPicStatus"]!=null)
-                { File.Delete(Session["RemvpicPhyPath"].ToString()); 
+                if (Session["RemvPicStatus"] != null)
+                {
+                    File.Delete(Session["RemvpicPhyPath"].ToString());
                     Session["profileimage"] = "";
                     Session["RemvpicPhyPath"] = null;
                 }
                 if(Session["chpicstatus"] != null)
                 {
-                    
                     File.Delete(Session["OldpicPhyPath"].ToString());
                     Session["chpicstatus"] = null;
                 }
                 if (Session["UpPicStatus"] != null)
-                { Session["UpPicStatus"] = null; }
+                {
+                    Session["UpPicStatus"] = null;
+                }
                 if (Session["profileImage"].ToString() != null && Session["profileimage"].ToString() != "")
                 {
                     path = Session["profileimage"].ToString();
@@ -96,14 +101,12 @@ namespace VirtualClassroom_final.UI
                         StringBuilder sb = new StringBuilder();
                         // sb.Append("<img src='../img/logo.jpg' height='150' width='200' /><br/>");
                         sb.Append(" Greetings. <br/> Dear '" + txtname.Text.Trim() + "'<br/>");
-                        sb.Append("Your Profile Has Been Updated Successfully  <a href='http://www.sidza.com'>SIDZA.COM</a>.<br/>Your Login details are as follows : <br/>");
-                        sb.Append("Please login to sidza<a href='http://www.sidza.com' target='_blank'>here</a><br/><br/><br/><br/>");
+                        sb.Append("Your Profile Has Been Updated Successfully.<br/>");
+                        sb.Append("Please login to sidza <a href='http://www.sidza.com' target='_blank'>here</a><br/><br/><br/><br/>");
                         sb.Append("Contact us for any queries or suggestions at <b>sidza999@gmail.com</b><br/>.Best Regards<br/><a href='http://www.sidza.com'>SIDZA.COM</a><br/>");
                         sb.Append("Happy Learning!! @ sidza.com<br/>");
                         Email.SendEmail(StuEmail, "Profile Update", sb.ToString());
-                        Session["email"] = StuEmail;
-                        
-                        
+                        Session["email"] = StuEmail;                       
                         txtname.Text = "";
                         StuEmail= "";
                         // txtcontact.Text = "";                            
@@ -167,8 +170,7 @@ namespace VirtualClassroom_final.UI
             {File.Delete(Session["RemvpicPhyPath"].ToString()); Session["RemvPicStatus"] = null; }
 
             FleUplImage.SaveAs(Server.MapPath("/img/") + FleUplImage.FileName);
-            imgProfile.Src = "../img/" + FleUplImage.FileName;
-           
+            imgProfile.Src = "../img/" + FleUplImage.FileName;           
           // MessageBox.Show(Server.MapPath(FleUplImage.FileName).ToString());
             Session["PhysicalPath"] = Server.MapPath("/img/") + FleUplImage.FileName.ToString();
             Session["UpPicStatus"]="true";

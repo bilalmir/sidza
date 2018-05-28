@@ -75,10 +75,10 @@ namespace Logic.BL
             return UserDL.RegisterStudent(name, email,classid, encryptpass,board,image);
         }
 
-        public static bool RegisterTeacher(string name, string email, long contact, string password, string subject, string qualification1, string qualification2, string qualification3, string path)
+        public static bool RegisterTeacher(string name, string email, long contact, string password, string subject, string qualification1, string qualification2, string qualification3, string path,string address)
         {
             string encryptpass = Encrypt.EncryptPassword(password);
-            return UserDL.RegisterTeacher(name, email, contact, encryptpass, subject, qualification1, qualification2, qualification3, path);
+            return UserDL.RegisterTeacher(name, email, contact, encryptpass, subject, qualification1, qualification2, qualification3, path,address);
         }
 
         public static bool SaveQuery(string name, string email, string contact,string message)
@@ -391,10 +391,7 @@ namespace Logic.BL
             return UserDL.FetchTeacherProfile(subject);
         }
 
-        public static DataTable FetchStudata(string email)
-        {
-            return UserDL.FetchStudata(email);
-        }
+      
         public static DataSet FetchTeacherFullProfile(int userid)
         {
             return UserDL.FetchTeacherFullProfile(userid);
