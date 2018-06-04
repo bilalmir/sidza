@@ -109,7 +109,7 @@
                         </li>
                     <li><a href="takeexam.aspx" style="color:white;" ID="lnkExam" runat="server"><span class="glyphicon glyphicon-edit"></span> Take Test</a></li>
                     <li><a href="OnlineTutor.aspx" style="color:white;" ID="lnkOnlineTutors" runat="server"><span class="glyphicon glyphicon-edit"></span> Online Tutor</a></li>
-                    <li><a href="#" style="color:white;" ID="lnkMyteacher" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Teachers</a></li>
+                    <li><a href="MyTeachers.aspx" style="color:white;" ID="lnkMyteacher" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Teachers</a></li>
                      <li><a href="#" style="color:white;" ID="lnkMyseasions" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Sessions</a></li>
                     </ul>
                     <ul class="nav navbar-nav pull-right" style="font-size:16px;">
@@ -178,12 +178,13 @@
                                                                   
                     </li>
                         <li class="dropdown">                             
-                            <a href="#" class="danger" id="ProfileLink"  data-placement="bottom" style="color:white;" runat="server" visible="false">
-                            <span ><img src="../img/profile.png" runat="server" id="imgProfile" width="40" height="50" class="img-thumbnail img-responsive" visible="true"/></span><span class="caret"></span></a>
+                            <a href="#" class="danger" id="ProfileLink"  data-placement="left" style="color:white;" runat="server" visible="false">
+                            <span ><img src="../img/profile.png" runat="server" id="imgProfile" width="40" height="50" class="img-thumbnail img-responsive img-rounded" visible="true"/></span><span class="caret"></span></a>
                              <div id="popover_content" style="display: none;">
-                            <div class="pull-left img-responsive" >                            
-                                  <a href="StudentProfile.aspx" id="lnkMyProfile"   style="color:green;font-size:16px;" runat="server" class="pull-left"><span class="glyphicon glyphicon-user"></span> My Profile</a>
-                                  <a href="#" id="lnklogout" data-target="#signout" data-toggle="modal" data-backdrop="false"  style="color:green;font-size:16px;" runat="server" class="pull-left"><span class="glyphicon glyphicon-off"></span>Sign Out </a>
+                              
+                                <div class="form-inline" >                         
+                                  <a href="StudentProfile.aspx" id="lnkMyProfile"   style="color:green;font-size:16px;" runat="server"><span class="glyphicon glyphicon-user"></span> My Profile</a></div>
+                                 <div class="form-inline"> <a href="#" id="lnklogout" data-target="#signout" data-toggle="modal" data-backdrop="false"  style="color:green;font-size:16px;" runat="server" ><span class="glyphicon glyphicon-off"></span>Sign Out </a></div>
                                  <div class="modal fade" id="signout" tabindex="-1">
                                        <div class="modal-dialog">
                                            <div class="modal-content">
@@ -203,7 +204,7 @@
                                         </div>
                         </div>                                              
                                </div>
-                             </div> 
+                             
                         </li>
                         <li>
                             <span></span>
@@ -241,7 +242,7 @@
                             ValidationGroup="btncontact"></asp:RegularExpressionValidator>
                                                </div>
                                                <div class="modal-footer">
-                                                    <asp:Button ID="btncontact" runat="server" Text="Send" CssClass="btn btn-success form-control"
+                         <asp:Button ID="btncontact" runat="server" Text="Send" CssClass="btn btn-success form-control"
                             ValidationGroup="btncontact" OnClick="btncontact_Click" />
                                                </div>
                                             </div>

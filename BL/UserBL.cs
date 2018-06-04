@@ -39,6 +39,14 @@ namespace Logic.BL
         {
             return UserDL.FetchStudata(StEmail);
         }
+        /// Author : Bhat javid
+
+        /// Remark : Call to fetch email of Student For the Myteacher page 
+        /// <returns></returns>
+        public static DataTable getteacheremail(string stuemail)
+        {
+            return UserDL.getteacheremail(stuemail);
+        }
         /// <summary>
         /// Author : Mir Bilal 
 
