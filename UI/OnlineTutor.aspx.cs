@@ -15,7 +15,7 @@ namespace VirtualClassroom_final.UI
         {
             if (!IsPostBack)
             {
-                if (Session["email"] != null && Session["TeachSighInStatus"].ToString() == "true")
+                if (Session["email"] != null && Session["StuSighInStatus"] == "true")
                 {
                     divRegistrationDialog.Visible = false;
                     divsearchTeacher.Visible = false;
@@ -55,9 +55,6 @@ namespace VirtualClassroom_final.UI
 
         protected void btnShowTeacherProfile_Click(object sender, EventArgs e)
         {
-            
-           
-
         }
 
         protected void grdvwShowTeachers_RowCommand(object sender, GridViewCommandEventArgs e)

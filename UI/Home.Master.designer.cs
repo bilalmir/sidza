@@ -58,6 +58,24 @@ namespace VirtualClassroom_final.UI {
         protected global::System.Web.UI.WebControls.HiddenField hdnlinks;
         
         /// <summary>
+        /// lnkvideolectures control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkvideolectures;
+        
+        /// <summary>
+        /// lnkmaterial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkmaterial;
+        
+        /// <summary>
         /// lnkExam control.
         /// </summary>
         /// <remarks>
@@ -85,13 +103,22 @@ namespace VirtualClassroom_final.UI {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkMyteacher;
         
         /// <summary>
-        /// lnkMyseasions control.
+        /// lnkStudentSessions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkMyseasions;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkStudentSessions;
+        
+        /// <summary>
+        /// lnkTeacherSession control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkTeacherSession;
         
         /// <summary>
         /// lnklogin control.
@@ -263,6 +290,60 @@ namespace VirtualClassroom_final.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnlogout;
+        
+        /// <summary>
+        /// lnkteacherProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkteacherProfile;
+        
+        /// <summary>
+        /// img1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage img1;
+        
+        /// <summary>
+        /// lnkshowteacherProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkshowteacherProfile;
+        
+        /// <summary>
+        /// lnklogout1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnklogout1;
+        
+        /// <summary>
+        /// lblloginStatus1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblloginStatus1;
+        
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// lblmessage control.

@@ -8,8 +8,7 @@
 
  <script type="text/javascript">
      function ChangeFile(fileUpload) {
-           if (fileUpload.value != '') {
-               
+           if (fileUpload.value != '') {               
                $('#ContentPlaceHolder1_btnChangeProfilepic').click();
            }
        }
@@ -38,8 +37,7 @@
                  return false;
              }
          });
-     });
-    
+     });    
  </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -134,6 +134,11 @@ namespace Logic.BL
             string encryptpass = Encrypt.EncryptPassword(password);
             return UserDL.UpdateStudent(name,Contact, classid, encryptpass, board, image,Email);
         }
+        public static bool UpdateTeacherProfile(string name, string Contact, string password,string qualification,string address, string subject, string image, string Email)
+        {
+            string encryptpass = Encrypt.EncryptPassword(password);
+            return UserDL.UpdateTeacherProfile(name, Contact, encryptpass,qualification,address, subject, image, Email);
+        }
         //---- FORGOT PASSWORD ---------------------------------------------------------------------------------------------------------
 
 
@@ -403,6 +408,10 @@ namespace Logic.BL
         public static DataSet FetchTeacherFullProfile(int userid)
         {
             return UserDL.FetchTeacherFullProfile(userid);
+        }
+        public static DataSet FetchTeacherFullProfileUsingEmail(String email)
+        {
+            return UserDL.FetchTeacherFullProfileUsingEmail(email);
         }
         public static DataSet FetchDocumentMaterial1()
         {

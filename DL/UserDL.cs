@@ -181,6 +181,42 @@ namespace Logic.DL
                 con.Close();
             }
         }
+        public static bool UpdateTeacherProfile(string name, string Contact, string password,string qualification,string address, string subject, string image, string Email)
+        {
+            SqlConnection con = new SqlConnection(DB.GetConnection());
+            try
+            {
+
+                con.Open();
+                string query = "Update dbo.[user] set name=@name,contact=@contact,password=@password,qualification1=@qualification,teacherSubject=@subject,address=@address,profileimage=@image where email='" + Email + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@subject", subject);
+                cmd.Parameters.AddWithValue("@image", image);
+                cmd.Parameters.AddWithValue("@contact", Contact);
+                cmd.Parameters.AddWithValue("@address", address);
+                cmd.Parameters.AddWithValue("@qualification", qualification);
+                int RowsAffected = cmd.ExecuteNonQuery();
+                if (RowsAffected > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         public static bool RegisterTeacher(string name, string email, long contact, string password, string subject, string qualification1, string qualification2, string qualification3, string path,string address)
         {
             SqlConnection con = new SqlConnection(DB.GetConnection());
@@ -1400,7 +1436,28 @@ namespace Logic.DL
                 con.Close();
             }
         }
-
+  public static DataSet  FetchTeacherFullProfileUsingEmail(String email)
+  {
+      SqlConnection con = new SqlConnection(DB.GetConnection());
+      try
+      {
+          con.Open();
+          SqlCommand cmd = new SqlCommand("select id,name,email,contact,teacherSubject,profileimage,qualification1,qualification2,qualification3,address from [user] where email=@email", con);
+          SqlDataAdapter da = new SqlDataAdapter(cmd);
+          cmd.Parameters.AddWithValue("@email", email);
+          DataSet ds = new DataSet();
+          da.Fill(ds);
+          return ds;
+      }
+      catch (Exception)
+      {
+          throw;
+      }
+      finally
+      {
+          con.Close();
+      }
+  }
         public static DataSet FetchDocumentMaterial1()
         {
             SqlConnection con = new SqlConnection(DB.GetConnection());

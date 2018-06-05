@@ -36,29 +36,44 @@ namespace VirtualClassroom_final.UI
                             lnkMyteacher.Visible = true;
                             lnkMyProfile.Visible = true;
                             ProfileLink.Visible = true;
-                            lnkMyseasions.Visible = true;
+                            lnkStudentSessions.Visible = true;
+                            lblloginStatus.Text = "Hi! " + Session["email"].ToString();   
                             imgProfile.Src = Session["profileImage"].ToString();
+                            if(imgProfile.Src=="")
+                            {
+                                imgProfile.Src = "../img/profile.png";
+                            }
                         }
-                        lnklogout.Visible = true;
-                        lblloginStatus.Text = "Hi! " + Session["email"].ToString();                     
+                        if(Session["TeachSighInStatus"].ToString() == "true")
+                        {
+                            lnkteacherProfile.Visible = true;
+                            lnkvideolectures.Visible = false;
+                            lnkmaterial.Visible = false;
+                            lnkExam.Visible = false;
+                            lnkOnlineTutors.Visible = false;
+                            lnkTeacherSession.Visible = true;
+                            lblloginStatus1.Text = "Hi! " + Session["email"].ToString();
+                            img1.Src = Session["profileImage"].ToString();
+                            if(img1.Src=="")
+                            {
+                                img1.Src = "../img/profile.png";
+                            }
+                        }
+                        lnklogout.Visible = true;                                         
                         lnklogin.Visible = false;
                         lnkforgotpassword.Visible = false;                      
                     }
 
                     if (Session["pageredirect"] != null && Session["email"] == null)
-                    {
-                     //   lblmessage.Text = Session["pageredirect"].ToString();
+                    {                     
                         Page.ClientScript.RegisterStartupScript(this.GetType(), "Information", "<script type='text/javascript'>alert('You need to Login/Register first.');</script>");
                     }
                     Session["pageredirect"] = null;
                 }
                 catch(Exception){}               
             }
-          
-
         }
-       
-       
+              
         protected void btnlogin_Click(object sender, EventArgs e)
         {
             try
@@ -95,8 +110,7 @@ namespace VirtualClassroom_final.UI
                             Session["StuSighInStatus"] = "true";
                             Session["TeachSighInStatus"] = "false";                           
                             hdnloginfo.Value = txtloginmail.Text;                          
-                            Response.Redirect("~/UI/LogRegister.aspx",false);
-  
+                            Response.Redirect("~/UI/LogRegister.aspx",false);  
                          }
                     }
                     else if (Convert.ToInt32(dtuser.Rows[0][3].ToString()) == 1)

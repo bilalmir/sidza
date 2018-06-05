@@ -51,7 +51,7 @@ namespace VirtualClassroom_final.UI
                 if (UserBL.Fetchemail(txtemail.Text))
                 {
 
-                    if (UserBL.RegisterTeacher(name, email, contact, password, subject, qualification1, qualification2, qualification3, path, address))
+                    if (UserBL.RegisterTeacher(name, email, contact, subject, qualification1, qualification2, qualification3, password, path,address))
                     {
                         DeleteStatus = false;
                         StringBuilder sb = new StringBuilder();

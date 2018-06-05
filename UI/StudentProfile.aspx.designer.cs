@@ -10,7 +10,7 @@
 namespace VirtualClassroom_final.UI {
     
     
-    public partial class WebForm2 {
+    public partial class StudentProfile {
         
         /// <summary>
         /// imgStu control.

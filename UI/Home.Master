@@ -16,8 +16,7 @@
      <script type="text/javascript" src="../Scripts/jquery-1.9.js"></script>    
     <link rel="stylesheet" href="../Styles/bootstrap.min.css" media="screen" />
     <link rel="Stylesheet" href="../Styles/bootstrap-responsive.min.css" />
-    <script src="../Scripts/bootstrap.min.js"></script>
-    
+    <script src="../Scripts/bootstrap.min.js"></script>    
     <script type="text/javascript">
         $(document).ready(function (event) {
             $('#btnlogin').click(function (e) {
@@ -53,6 +52,16 @@
                 }
             });
         });
+       </script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $('.danger2').popover({
+                 html: true,
+                 content: function () {
+                     return $('#popover_content1').html();
+                 }
+             });
+         });
        </script>
     <%--  <script type="text/javascript">
           $(window).ready(function () {
@@ -94,9 +103,9 @@
                 <ul class="nav navbar-nav" style="background-color:forestgreen;font-size:18px;">       
                        <li class="brand"><img src="../img/logo.jpg" class="img-rounded" style="height:72px;width:90px;" /></li>               
                         <li><a href="LogRegister.aspx" style="color:white;" runat="server"><span class="glyphicon glyphicon-home"></span> Home</a></li>         
-                         <li><a href="VideoLectures.aspx" style="color:white;" runat="server"><span class="glyphicon glyphicon-facetime-video"></span> Video Lectures</a></li>                                            
+                         <li><a href="VideoLectures.aspx" id="lnkvideolectures" style="color:white;" runat="server"><span class="glyphicon glyphicon-facetime-video"></span> Video Lectures</a></li>                                            
                          <li class="dropdown">
-                             <a href="#" class="danger1" id="lnkmaterial"  data-placement="bottom" style="color:white;">
+                             <a href="#" class="danger1" id="lnkmaterial"  runat="server" data-placement="bottom" style="color:white;">
                                 <span class="glyphicon glyphicon-book"></span> View Material <span class="caret"></span>
                              </a>                     
                            <div id="popover_content_wrapper" style="display: none;">
@@ -110,7 +119,8 @@
                     <li><a href="takeexam.aspx" style="color:white;" ID="lnkExam" runat="server"><span class="glyphicon glyphicon-edit"></span> Take Test</a></li>
                     <li><a href="OnlineTutor.aspx" style="color:white;" ID="lnkOnlineTutors" runat="server"><span class="glyphicon glyphicon-edit"></span> Online Tutor</a></li>
                     <li><a href="MyTeachers.aspx" style="color:white;" ID="lnkMyteacher" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Teachers</a></li>
-                     <li><a href="#" style="color:white;" ID="lnkMyseasions" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Sessions</a></li>
+                    <li><a href="#" style="color:white;" ID="lnkStudentSessions" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Sessions</a></li>
+                    <li><a href="#" style="color:white;" ID="lnkTeacherSession" runat="server" visible="false"><span class="glyphicon glyphicon-book"></span> My Sessions</a></li>
                     </ul>
                     <ul class="nav navbar-nav pull-right" style="font-size:16px;">
                        <li>
@@ -146,19 +156,15 @@
                                           <div>
                                               <asp:Button type="button" ID="btnReg" Font-Bold="true" runat="server" class="btn btn-success form-control" ValidationGroup="btnsubmit" OnClick="btnReg_Click"  Text="Register"/>                              
                                           </div> 
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>                         
-                           <div>                               
-                                 <a href="#" data-target="#forgotpassword" data-toggle="modal" data-backdrop="false" style="color:whitesmoke;font-size:x-small;" id="lnkforgotpassword" runat="server">
+                                           <div>                               
+                                 <a href="#" data-target="#forgotpassword" data-toggle="modal" data-backdrop="false" style="color:green;font-size:x-small;" id="lnkforgotpassword" runat="server">
                                    <span class="glyphicon glyphicon-user"></span>Forgot Password?</a>
                                    <div class="modal fade" id="forgotpassword" tabindex="-1">
                                        <div class="modal-dialog">
                                            <div class="modal-content">
                                                <div class="modal-header">
-                                                   <%--<button class="close" data-dismiss="modal" runat="server">&times;</button>--%>
-                                                   <asp:Button ID="btnClose" runat="server" CssClass="close btn-link" Text="Close"/>
+                                                   <button class="close" data-dismiss="modal" runat="server">&times;</button>
+                                                   <%--<asp:Button ID="btnClose" runat="server" CssClass="close btn-link" Text="Close"/>--%>
                                                    <h4 class="modal-title">Forgot Password</h4>                                                   
                                                </div>
                                                <div class="modal-body">
@@ -175,16 +181,19 @@
                                    </div>    
                                                     
                           </div>
-                                                                  
-                    </li>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div> 
+
+                       </li>
                         <li class="dropdown">                             
-                            <a href="#" class="danger" id="ProfileLink"  data-placement="left" style="color:white;" runat="server" visible="false">
-                            <span ><img src="../img/profile.png" runat="server" id="imgProfile" width="40" height="50" class="img-thumbnail img-responsive img-rounded" visible="true"/></span><span class="caret"></span></a>
+                            <a href="#" class="danger" id="ProfileLink"  data-placement="bottom" style="color:white;" runat="server" visible="false">
+                            <span ><img src="../img/profile.png" runat="server" id="imgProfile" style="height:60px;width:70px;" class="img-thumbnail img-responsive" visible="true"/></span><span class="caret"></span></a>
                              <div id="popover_content" style="display: none;">
-                              
-                                <div class="form-inline" >                         
-                                  <a href="StudentProfile.aspx" id="lnkMyProfile"   style="color:green;font-size:16px;" runat="server"><span class="glyphicon glyphicon-user"></span> My Profile</a></div>
-                                 <div class="form-inline"> <a href="#" id="lnklogout" data-target="#signout" data-toggle="modal" data-backdrop="false"  style="color:green;font-size:16px;" runat="server" ><span class="glyphicon glyphicon-off"></span>Sign Out </a></div>
+                            <div class="img-responsive" style="width:100px;" >                            
+                                  <span class=" pull-left glyphicon glyphicon-user"></span> <a href="StudentProfile.aspx" id="lnkMyProfile"   style="color:green;font-size:16px;" runat="server"> My Profile</a><br />
+                                  <span class="pull-left glyphicon glyphicon-off"></span><a href="#" id="lnklogout" data-target="#signout" data-toggle="modal" data-backdrop="false"  style="color:green;font-size:16px;" runat="server" > Sign Out </a>
                                  <div class="modal fade" id="signout" tabindex="-1">
                                        <div class="modal-dialog">
                                            <div class="modal-content">
@@ -202,16 +211,40 @@
                                                </div>
                                            </div>
                                         </div>
-                        </div>                                              
+                                     </div>                                              
                                </div>
-                             
+                             </div> 
+                            <div>
+                            <a href="#" class="danger2" id="lnkteacherProfile"  data-placement="bottom" style="color:white;" runat="server" visible="false">
+                            <span ><img src="../img/profile.png" runat="server" id="img1" width="40" style="height:60px;width:70px;" class="img-thumbnail img-responsive" visible="true"/></span><span class="caret"></span></a>
+                             <div id="popover_content1" style="display: none;">
+                            <div class="img-responsive" style="width:100px;" >                            
+                                  <span class=" pull-left glyphicon glyphicon-user"></span> <a href="MyTeacherProfile.aspx" id="lnkshowteacherProfile"   style="color:green;font-size:16px;" runat="server"> My Profile</a><br />
+                                  <span class="pull-left glyphicon glyphicon-off"></span> <a href="#" id="lnklogout1" data-target="#signout1" data-toggle="modal" data-backdrop="false"  style="color:green;font-size:16px;" runat="server">Sign Out </a>                                             
+                                 <div class="modal fade" id="signout1" tabindex="-1">
+                                       <div class="modal-dialog">
+                                           <div class="modal-content">
+                                               <div class="modal-header">
+                                                   <button class="close">&times;</button>
+                                                     <h4 class="modal-title">Logout</h4>
+                                               </div>
+                                               <div class="modal-body">
+                                                   <span class="glyphicon glyphicon-user"></span>
+                                                   <asp:Label ID="lblloginStatus1" runat="server"  ForeColor="green"></asp:Label>                                
+                                               </div>
+                                               <div class="modal-footer">
+                                                   <asp:Button ID="Button2" runat="server"  CssClass="btn-link" ForeColor="green" Text="Logout" OnClick="btnlogout_Click" /> 
+                                               </div>
+                                           </div>
+                                        </div>
+                                     </div>    
+                            </div>
+                             </div>
+                            </div>
                         </li>
                         <li>
                             <span></span>
-                        </li>
-                       
-                                                            
-                             
+                        </li>                            
                 </ul>
                  </div>   
              <div class="pull-right" style="padding-right:5px;">
@@ -242,7 +275,7 @@
                             ValidationGroup="btncontact"></asp:RegularExpressionValidator>
                                                </div>
                                                <div class="modal-footer">
-                         <asp:Button ID="btncontact" runat="server" Text="Send" CssClass="btn btn-success form-control"
+                                                    <asp:Button ID="btncontact" runat="server" Text="Send" CssClass="btn btn-success form-control"
                             ValidationGroup="btncontact" OnClick="btncontact_Click" />
                                                </div>
                                             </div>

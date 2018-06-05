@@ -29,12 +29,11 @@ namespace VirtualClassroom_final.UI
                     ddlclass.DataValueField = "classid";
                     ddlclass.DataTextField = "classname";
                     ddlclass.DataBind();
+                    ddlclass.Items.Insert(0, "-Select Class-");
                     int clasid = Convert.ToInt32(Stu_dt.Rows[0].ItemArray[11].ToString());
                     txtname.Text = Stu_dt.Rows[0].ItemArray[1].ToString();
                     txtname.Focus();
-                    txtBoard.Text = Stu_dt.Rows[0].ItemArray[12].ToString();
-                    ddlclass.SelectedValue = "-Select-";
-                    Session["RemvPicStatus"] = null;
+                    txtBoard.Text = Stu_dt.Rows[0].ItemArray[12].ToString();                    
                     Session["chpicstatus"] = null;
                     Session["UpPicStatus"] = null;
                     lnkChangePic.Visible = false;
@@ -111,7 +110,7 @@ namespace VirtualClassroom_final.UI
                         StuEmail= "";
                         // txtcontact.Text = "";                            
                         txtpass.Text = "";
-                        Response.Redirect("~/UI/RegistrationStatus.aspx");
+                        Response.Redirect(Request.RawUrl);
                     }
                     else
                     {
@@ -119,7 +118,7 @@ namespace VirtualClassroom_final.UI
                         {
                             System.IO.File.Delete(path);
                         }
-                        ClientScript.RegisterStartupScript(this.GetType(), "Information", "<script type='text/javascript'>alert('An error occured while registration.');</script>");
+                        ClientScript.RegisterStartupScript(this.GetType(), "Information", "<script type='text/javascript'>alert('An error occured updating your profile.');</script>");
                     }
               
             }
