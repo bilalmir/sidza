@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="VirtualClassroom_final.UI.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <script type="text/javascript" src="../Scripts/jquery-1.9.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    <link rel="Stylesheet" href="../Styles/bootstrap-responsive.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap-theme.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap-theme.min.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap-responsive.min.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap.css" />
+ 
+    <link rel="Stylesheet" href="../Styles/Site.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap.min.css" />   
+    <meta name="viewport" content="width-device-width,initial-scale=1,maximum-scale=1" />
+    <script type="text/javascript">
+        
+        $.ajaxPrefilter(function (options, original_Options, jqXHR) {
+            options.async = true;
+        });
+         //function disableback() {
+         //    window.history.forward();
+
+
+
+         //}
+         //window.onload = disableback;
+         //window.onpageshow = function disable(e) { if (e.persistant) { disableback(); } }
+         //window.onunload = disableback;   
+    </script>
+     <script type="text/javascript">
+         //Check if the top location is same as the current location
+         if (top.location.hostname != self.location.hostname) {
+             //If not then set the top to you current
+             top.location.href = self.location.href;
+         }
+    </script>
+     <script type="text/javascript">
+         $(document).ready(function (event) {
+             $('#lnksetpaper').click(function (e) {
+                 if ($('#hdnadmininfo').val() == '') {
+                     alert("Please login to download content");
+                     return false;
+                 }
+             });
+         });
+    </script>
+  <%--   <script type="text/javascript">
+         $(document).ready(function () {
+             $('.danger').popover({
+                 html: true,
+                 content: function () {
+                     return $('#popover_content_wrapper').html();
+                 }
+             });
+         });
+    </script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="script" runat="server"></asp:ScriptManager>
+    <div class="navbar navbar-fixed-top">      
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="collapse nav-collapse ">
+                    <ul class="nav pull-left">
+                        <li><a href="AdminWelcome.aspx"><asp:Image ID="imglogo" runat="server" ImageUrl="~/img/logo.jpg" Height="80px" style="margin-left:-200px;" CssClass="img-rounded" Width="100px" /></a>
+                        </li>
+                        <li class="">
+                            <asp:HyperLink ID="lnkhome" runat="server" NavigateUrl="~/Admin/AdminWelcome.aspx">Home<i class="icon-home pull-left nav-pills" ></i></asp:HyperLink></li>
+                        <li> <asp:HyperLink ID="lnkclass" runat="server" NavigateUrl="~/Admin/AddClass.aspx">Manage Classes</asp:HyperLink></li>                       
+                        <li>
+                            <asp:HyperLink ID="lnksubject" runat="server" NavigateUrl="~/Admin/AddSubject.aspx">Manage Subjects</asp:HyperLink></li>
+                         <li>
+                            <asp:HyperLink ID="lnkChapter" runat="server" NavigateUrl="~/Admin/AddChapter.aspx">Manage Chapters</asp:HyperLink></li>
+                         <li>
+                            <asp:HyperLink ID="lnkTitle" runat="server" NavigateUrl="~/Admin/AddTitle.aspx">Manage Titles</asp:HyperLink></li>
+                         <li>
+                            <asp:HyperLink ID="lnkverify" runat="server" NavigateUrl="~/Admin/UploadMaterial.aspx">Upload Material</asp:HyperLink></li>                        
+                         <li>
+                            <asp:HyperLink ID="lnkprivlgs" runat="server" NavigateUrl="~/Admin/Priviliges.aspx">User Priviliges</asp:HyperLink></li>
+                         <li>
+                            <asp:HyperLink ID="lnkactive" runat="server" NavigateUrl="~/Admin/ActiveUsers.aspx">Active Users</asp:HyperLink></li>
+                         <li>
+                            <asp:HyperLink ID="lnksetpaper" runat="server" NavigateUrl="~/Admin/SetObjectivePaper.aspx">Objective Questions</asp:HyperLink></li>
+                         <li>
+                            <asp:HyperLink ID="lnkblocked" runat="server" NavigateUrl="~/Admin/BlockedUsers.aspx" >Blocked Users</asp:HyperLink></li>
+                         <li>
+                            <asp:HyperLink ID="lnkuploadArticle" runat="server" NavigateUrl="~/Admin/UploadArticles.aspx">Article & NEWS</asp:HyperLink></li>
+                       <li>
+                            <asp:HyperLink ID="lnkfeedback" runat="server" NavigateUrl="~/Admin/FeedBack.aspx">Feedback & Queries</asp:HyperLink></li>
+                       
+                            <%--<asp:Button ID="Logout" runat="server" CssClass="btn btn-nav" Text="Logout" NavigateUrl="#" /></li>--%>
+                            <%--<button type="button" id="loginbtn" runat="server" class="btn btn-primary" style="padding-top: 0.40em;">
+                                Logout<i class="icon-circle-arrow-right pull-left" style="padding-top: 0em;"></i></button>--%>
+                    </ul>              
+                   
+                </div>
+            </div>
+
+            <%-- <asp:Image ID="Image1" runat="server" ImageUrl="../img/dev7logo.png" Style="margin-top: -65px;
+                margin-left: 1kpx;" data-toggle="tooltip" title="Virtual Classroom" data-placement="bottom" />--%>
+            <asp:Button ID="btnlogout" runat="server" Text="Logout" CssClass="btn" Font-Bold="true" OnClick="btnlogout_Click"
+                Style="margin-top: -35px; margin-left: 1270px;" />
+        </div>
+        <%-- <asp:Image ID="Image1" runat="server" ImageUrl="~/img/Untitled-9.png" style="margin-top:-40px;
+            margin-left: 20px;" />--%>
+    </div><br />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+<%--    <div class="collapse nav-collapse ">
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner">
+                <section>                    
+                    <ul class="inline text-center">
+                        <li class="">
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="#">About Us</asp:HyperLink></li>
+                        <li><a class="divider"></a></li>
+                         <li class="">
+                            <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="#">Contact</asp:HyperLink></li>
+                        <li><a class="divider"></a></li>
+                         <li class="">
+                            <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="#">Disclaimer</asp:HyperLink></li>
+                        <li><a class="divider"></a></li>
+
+                    </ul>
+                    <p class="text-center muted">
+                        All Content and Intellectual Property is under Copyright Protection | sidza.com&copy;2017
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>--%>
+    </form>
+</body>
+</html>

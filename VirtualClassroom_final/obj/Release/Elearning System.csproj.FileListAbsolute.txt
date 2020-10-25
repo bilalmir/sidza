@@ -1,0 +1,12 @@
+E:\SDZ\sidza\VirtualClassroom_final\bin\VirtualClassroom_final.dll.config
+E:\SDZ\sidza\VirtualClassroom_final\bin\VirtualClassroom_final.dll
+E:\SDZ\sidza\VirtualClassroom_final\bin\VirtualClassroom_final.pdb
+E:\SDZ\sidza\VirtualClassroom_final\bin\Logic.dll
+E:\SDZ\sidza\VirtualClassroom_final\bin\Logic.pdb
+E:\SDZ\sidza\VirtualClassroom_final\bin\Logic.dll.config
+E:\SDZ\sidza\VirtualClassroom_final\obj\Release\Elearning System.csproj.App.config
+E:\SDZ\sidza\VirtualClassroom_final\obj\Release\Elearning System.csprojResolveAssemblyReference.cache
+E:\SDZ\sidza\VirtualClassroom_final\obj\Release\VirtualClassroom_final.dll.licenses
+E:\SDZ\sidza\VirtualClassroom_final\obj\Release\Elearning System.csproj.CoreCompileInputs.cache
+E:\SDZ\sidza\VirtualClassroom_final\obj\Release\VirtualClassroom_final.dll
+E:\SDZ\sidza\VirtualClassroom_final\obj\Release\VirtualClassroom_final.pdb

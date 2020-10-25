@@ -1,0 +1,46 @@
+E:\SDZ\sidza\VirtualClassroom_final\bin\VirtualClassroom_final.dll.config
+E:\SDZ\sidza\VirtualClassroom_final\bin\VirtualClassroom_final.dll
+E:\SDZ\sidza\VirtualClassroom_final\bin\VirtualClassroom_final.pdb
+E:\SDZ\sidza\VirtualClassroom_final\bin\Logic.dll
+E:\SDZ\sidza\VirtualClassroom_final\bin\Logic.pdb
+E:\SDZ\sidza\VirtualClassroom_final\bin\Logic.dll.config
+E:\SDZ\sidza\VirtualClassroom_final\obj\Debug\Elearning System.csproj.App.config
+E:\SDZ\sidza\VirtualClassroom_final\obj\Debug\VirtualClassroom_final.dll.licenses
+E:\SDZ\sidza\VirtualClassroom_final\obj\Debug\Elearning System.csproj.CoreCompileInputs.cache
+E:\SDZ\sidza\VirtualClassroom_final\obj\Debug\VirtualClassroom_final.dll
+E:\SDZ\sidza\VirtualClassroom_final\obj\Debug\VirtualClassroom_final.pdb
+E:\SDZ\sidza\VirtualClassroom_final\bin\log4net.xml
+E:\SDZ\sidza\VirtualClassroom_final\obj\Debug\Elearning System.csprojAssemblyReference.cache
+E:\SDZ\sidza\VirtualClassroom_final\obj\Debug\Elearning System.csproj.CopyComplete
+E:\SIDZA\VirtualClassroom_final\bin\VirtualClassroom_final.dll.config
+E:\SIDZA\VirtualClassroom_final\bin\VirtualClassroom_final.dll
+E:\SIDZA\VirtualClassroom_final\bin\VirtualClassroom_final.pdb
+E:\SIDZA\VirtualClassroom_final\bin\Logic.dll
+E:\SIDZA\VirtualClassroom_final\bin\Microsoft.Threading.Tasks.dll
+E:\SIDZA\VirtualClassroom_final\bin\Logic.pdb
+E:\SIDZA\VirtualClassroom_final\bin\Logic.dll.config
+E:\SIDZA\VirtualClassroom_final\bin\DocumentFormat.OpenXml.xml
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.pdb
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.xml
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.Auth.pdb
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.Auth.xml
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.Core.pdb
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.Core.xml
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.YouTube.v3.pdb
+E:\SIDZA\VirtualClassroom_final\bin\Google.Apis.YouTube.v3.xml
+E:\SIDZA\VirtualClassroom_final\bin\log4net.xml
+E:\SIDZA\VirtualClassroom_final\bin\Microsoft.Threading.Tasks.Extensions.xml
+E:\SIDZA\VirtualClassroom_final\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+E:\SIDZA\VirtualClassroom_final\bin\Newtonsoft.Json.xml
+E:\SIDZA\VirtualClassroom_final\bin\System.Net.Http.Extensions.xml
+E:\SIDZA\VirtualClassroom_final\bin\System.Net.Http.Primitives.xml
+E:\SIDZA\VirtualClassroom_final\bin\Zlib.Portable.xml
+E:\SIDZA\VirtualClassroom_final\bin\System.Net.Http.xml
+E:\SIDZA\VirtualClassroom_final\bin\Microsoft.Threading.Tasks.xml
+E:\SIDZA\VirtualClassroom_final\obj\Debug\Elearning System.csproj.App.config
+E:\SIDZA\VirtualClassroom_final\obj\Debug\Elearning System.csprojAssemblyReference.cache
+E:\SIDZA\VirtualClassroom_final\obj\Debug\VirtualClassroom_final.dll.licenses
+E:\SIDZA\VirtualClassroom_final\obj\Debug\Elearning System.csproj.CoreCompileInputs.cache
+E:\SIDZA\VirtualClassroom_final\obj\Debug\Elearning System.csproj.CopyComplete
+E:\SIDZA\VirtualClassroom_final\obj\Debug\VirtualClassroom_final.dll
+E:\SIDZA\VirtualClassroom_final\obj\Debug\VirtualClassroom_final.pdb

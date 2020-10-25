@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elearning System", "VirtualClassroom_final\Elearning System.csproj", "{D53BEE30-96D7-4E2D-85A8-39AFFC81958A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{79ED7E69-9BE6-4FC4-8CCE-8A54955BA8D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D53BEE30-96D7-4E2D-85A8-39AFFC81958A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53BEE30-96D7-4E2D-85A8-39AFFC81958A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53BEE30-96D7-4E2D-85A8-39AFFC81958A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53BEE30-96D7-4E2D-85A8-39AFFC81958A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79ED7E69-9BE6-4FC4-8CCE-8A54955BA8D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79ED7E69-9BE6-4FC4-8CCE-8A54955BA8D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79ED7E69-9BE6-4FC4-8CCE-8A54955BA8D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79ED7E69-9BE6-4FC4-8CCE-8A54955BA8D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

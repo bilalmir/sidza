@@ -1,0 +1,368 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs"  Inherits="VirtualClassroom_final.UI.Home" %>
+<%@ Register Assembly="AjaxControlToolkit"  Namespace="AjaxControlToolkit" TagPrefix="aa" %>
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+    <script type="text/javascript" src="../Scripts/jquery-1.9.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    <link rel="Stylesheet" href="../Styles/bootstrap-responsive.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap-responsive.min.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap.css" />
+    <link rel="Stylesheet" href="../Styles/Site.css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap.min.css" /> 	
+    <link rel="stylesheet" type="text/css" href="../Scripts/engine2/style.css" />a
+
+    <%--<link rel="stylesheet" type="text/css" href="../Scripts/youtube popup/YouTubePopUp.css">
+    <script type="text/javascript" src="jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/youtube popup/YouTubePopUp.jquery.js"></script>
+    <script type="text/javascript" src="engine1/jquery.js"></script>  --%>
+     <link rel="stylesheet" type="text/css" href="../Scripts/youtube popup/YouTubePopUp.css">
+ <%--   <script type="text/javascript" src="jquery-1.12.1.min.js"></script>--%>
+    <script type="text/javascript" src="../Scripts/youtube popup/YouTubePopUp.jquery.js"></script>
+     <script type="text/javascript">
+         jQuery(function () {
+             jQuery("a.bla-1").YouTubePopUp();
+
+         });
+    </script>
+  <style>
+			.ontop {
+				z-index: 9999999999999;
+				width: 100%;
+				height: 200%;
+				top: 0;
+				left: 0;				
+				position: fixed;				
+				background-color:#000;                				
+				opacity: 1;
+				filter: alpha(opacity = 50);
+			}
+			#popup {
+				
+				position: absolute;
+				top: 1%;
+				left: 13%;
+				
+			}
+		</style>
+		<script type="text/javascript">
+		    function pop(div) {
+		        document.getElementById(div).style.display = 'block';
+		    }
+		    function hide(div) {
+		        document.getElementById(div).style.display = 'none';
+		    }
+		    //To detect escape button
+		    document.onkeydown = function (evt) {
+		        evt = evt || window.event;
+		        if (evt.keyCode == 27) {
+		            hide('popDiv');
+		        }
+		    };
+		</script>	
+		 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1" />
+    <script type="text/javascript">
+        $(document).ready(function (event) {
+            $('#btnlogin').click(function (e) {
+                if ($('#txtloginmail').val() == '') {
+                    alert("Email can't be left blank");
+                    return false;
+                }
+                else if 
+                ($('#txtloginpass').val() == '') {
+                    $('#txtloginpass').focus();
+                    alert("Password can't be left blank");
+                    return false;
+                }
+            });
+        });
+    </script>
+     <script type="text/javascript">
+         //Check if the top location is same as the current location
+         if (top.location.hostname != self.location.hostname) {
+             //If not then set the top to you current
+             top.location.href = self.location.href;
+         }
+    </script>
+    <script type="text/javascript">
+            $(document).ready(function (event) {
+                $('#lnkExam').click(function (e) {
+                    if ($('#hdnloginfo').val() == '') {
+                        alert("Please login/Register to take any test");
+                        return false;
+                    }
+                   });
+                });  
+
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function (event) {
+            $('#HyperLink9').click(function (e) {
+                if ($('#hdnloginfo').val() == '') {
+                    alert("Please login/Register to download content");
+                    return false;
+                }
+            });
+        });
+    </script>
+      <script type="text/javascript">
+          $(document).ready(function (event) {
+              $('#HyperLink10').click(function (e) {
+                  if ($('#hdnloginfo').val() == '') {
+                      alert("Please login/Register to download content");
+                      return false;
+                  }
+              });
+          });
+    </script>
+    <script type="text/javascript">
+   
+        //function disableback() {
+        //    window.history.forward();
+
+       
+
+        //}
+        //window.onload = disableback;
+        //window.onpageshow = function disable(e) { if (e.persistant) { disableback(); } }
+        //window.onunload = disableback;
+    
+    
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+             $('.danger').popover({
+                html: true,
+                content: function () {
+                    return $('#popover_content_wrapper').html();
+                }
+            });
+
+
+        });
+
+
+      
+    
+    
+    </script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $('.danger3').popover({
+                 html: true,
+                 content: function () {
+                     return $('#popover_content_wrapper3').html();
+                 }
+             });
+         });
+
+     </script>
+       <script type="text/javascript">
+           $(document).ready(function () {
+               $('.danger4').popover({
+                   html: true,
+                   content: function () {
+                       return $('#popover_content_wrapper4').html();
+                   }
+               });
+           });
+
+     </script>
+ 
+    <script type="text/javascript">
+        $(function () {
+            $('#txtcontact').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96
+                            && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+        });
+
+    </script>
+    <style type="text/css">
+        .back
+        {
+            background-color: #000000;
+            opacity: 0.90;
+        }
+
+        .back2
+        {
+            background-color: #000000;
+            opacity: 0.80;
+        }
+
+
+        #div3
+        {
+            background-color: #FFFFFF;
+            margin: -5px 0px 0px 65px;
+            padding: 10px 0px 0px 30px;
+            border: 7px solid #CCCCCC;
+            border-radius: 7px;
+            width: 200px;
+            height: 110px;
+        }
+
+        #forgtpass
+        {
+            background-color: #FFFFFF;
+            margin: -5px 0px 0px 65px;
+            padding: 10px 0px 0px 30px;
+            border: 7px solid #CCCCCC;
+            border-radius: 7px;
+            border-style: double;
+            width: 250px;
+            height: 110px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#lnkadmin').click(function () {
+                $('#my-modal').modal();
+            });
+        });
+    </script>
+
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="background-color:white">
+      <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+     <div class="navbar navbar-fixed-top">        
+        <div class="" style="background-color:forestgreen;">
+            <div class="">
+                <div class="collapse nav-collapse" >         
+
+                   <ul class="nav">
+                       <li><a href="LogRegister.aspx"><asp:Image ID="imglogo" runat="server" ImageUrl="~/img/logo.jpg" Height="80px" style="margin-left:1px;" CssClass="img-rounded" Width="100px" /></a></li>
+                        <li class="">
+                            <asp:HyperLink ID="lnkhome" runat="server" CssClass="pager" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:larger;text-decoration:solid;border-color:yellow;text-decoration-color:yellow;color:whitesmoke;"  NavigateUrl="~/UI/LogRegister.aspx">Home<i class="icon-home pull-left" ></i></asp:HyperLink></li>
+                        
+                         <li>
+                            <asp:HyperLink ID="lnkviewmtrl" runat="server" CssClass="pager" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:larger;text-decoration:solid;border-color:yellow;text-decoration-color:yellow;color:white;" NavigateUrl="~/UI/VideoLectures.aspx">Video Lectures</asp:HyperLink></li>
+                        
+                         <li>
+                            <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="#" CssClass="danger pager" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:larger;text-decoration:solid;border-color:yellow;text-decoration-color:yellow;color:white;" data-placement="bottom">View Material</asp:HyperLink></li>
+                               <div id="popover_content_wrapper" style="display: none; width: 90px; height: 150px;">
+                                  <div style="width: 120px; height: 150px;">
+                                   <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/UI/ViewMaterial.aspx" CssClass="danger">Study Material</asp:HyperLink><hr />
+                                   <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/UI/QuestionsPapers.aspx" CssClass="danger">Question Papers</asp:HyperLink><hr />
+                                   <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/UI/Syllabus.aspx" CssClass="danger">Syllabus</asp:HyperLink>
+                            </div>
+                        </div>
+                                   
+                       <li> <asp:HyperLink ID="lnkExam" runat="server" CssClass="pager"  style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:larger;text-decoration:solid;border-color:yellow;text-decoration-color:yellow;color:white;" NavigateUrl="~/UI/takeexam.aspx">Take Test</asp:HyperLink></li>
+                        </ul>
+                          <asp:Panel ID="hideLogin" style="margin-top:24px;" CssClass="pull-right"  runat="server">
+                               <asp:TextBox ID="txtloginmail" runat="server" CssClass="" placeholder="Email"
+                                    Style="height: 30px; margin-top: 0.70em;"></asp:TextBox>
+                             
+                              <asp:TextBox ID="txtloginpass" runat="server" placeholder="Password" CssClass="" TextMode="Password"
+                                    Style="height: 30px; margin-top: 0.70em;"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ForeColor="Red"
+                                    ControlToValidate="txtloginmail" ErrorMessage="***" CssClass="" ValidationExpression='\w+([-+.&#039;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*'
+                                    ValidationGroup="btnlogin"></asp:RegularExpressionValidator>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtloginpass"
+                                    CssClass="pull-right offset1" ErrorMessage="" ForeColor="Red" Display="Static"
+                                    ValidationGroup="btnlogin"></asp:RequiredFieldValidator>
+                             <asp:HiddenField ID="hdnloginfo" runat="server" />
+                              <asp:Button type="button" ID="btnlogin" Font-Bold="true" runat="server" class="btn btn-success "
+                                    Text="Login" Style="margin-top: -0.1em;" OnClick="btnlogin_Click" ValidationGroup="btnlogin" />
+                                 <asp:Button type="button" ID="btnReg" Font-Bold="true" runat="server" class="btn btn-success "
+                                                              OnClick="btnReg_Click"  Text="Register" Style="margin-top: -0.1em;" />   
+                               </asp:Panel>
+                         
+                       <asp:Panel ID="pnlloginstatus" CssClass="pull-right offset1" style="margin-top:40px;" Visible="false" runat="server">
+                               <asp:Label ID="lblloginStatus" runat="server"  ForeColor="White"  CssClass="btn-link"  ></asp:Label>
+                              <asp:Button ID="btnlogout" runat="server"  CssClass="btn-link" ForeColor="White" Text="Logout" OnClick="btnlogout_Click" /> 
+                        </asp:Panel>
+            
+                        <%-----------------------------------------------popup forgotpass start-------------------------------------------------------%>                     
+                     <asp:HyperLink ID="lnkforgot" runat="server" CssClass="danger3" data-placement="bottom" Style="color:white;margin-top:30px; margin-left: 1110px;"
+                            Font-Size="X-Small" NavigateUrl="#">
+                        Forgot Password?</asp:HyperLink>
+                       <div id="popover_content_wrapper3" style="display: none; width: 120px; height: 150px;">
+                            <div style="width: 250px; height: 90px;">
+                                  <asp:ImageButton ID="ImageButton1" ClientIDMode="Static" runat="server" ImageUrl="../img/download.jpg"
+                                    Width="20" Height="20" Style="float: right; margin-top: -10px;" />
+                                <asp:TextBox ID="txtforgotpass" runat="server" placeholder="Please enter your email"
+                                    Style="height: 30px;"></asp:TextBox><br />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtforgotpass"
+                                    CssClass="offset1" ErrorMessage="Email Required" ForeColor="Red" ValidationGroup="btnforgotpass"></asp:RequiredFieldValidator>
+                                <asp:Button ID="btnforgotpass" runat="server" Text="Send Password" CssClass="btn btn-info"
+                                    Style="margin-top: -20px;" ValidationGroup="btnforgotpass" OnClick="btnforgotpass_Click" />
+                            </div>
+                        </div>      
+                   
+                        <%-- -----------------------------------------------------------popup forgotpass end-------------------------------------%>                   
+                  
+                </div>
+             </div>
+              <asp:Label ID="lblmessage" runat="server" ForeColor="White" Font-Size="Small" 
+                         CssClass="text text-info"  Style=" margin-top: 0px;margin-left:65%;"></asp:Label>  
+                    <asp:Label ID="lblauthn" runat="server" CssClass="text text-error text-warning" 
+                           ForeColor="White" Style="margin-top:0px;"></asp:Label>
+                     <asp:Label ID="lblmsg" runat="server"  CssClass="text text-error text-warning" ForeColor="White" 
+                             Style="margin-top: 0px;"></asp:Label>
+                      <asp:Label ID="lblmsg3" runat="server" CssClass="text text-info" ForeColor="White" 
+                           Style="margin-top: 0px;"></asp:Label>
+          </div>
+        <div class=" text-center" style="padding-top: 3em; color: Black; margin-top: -10px;">
+           
+            <br />             
+           <asp:HyperLink ID="lnkadmin" runat="server" CssClass="danger4 pull-right offset3" Visible="false"  data-placement="bottom"
+                      NavigateUrl="#" Style="margin-top: -75px;">Conatct Admin</asp:HyperLink>
+             <div id="popover_content_wrapper4" style="display: none; width: 100px; height: 150px;" class="offset3">
+                     <div style="width: 250px; height: 100px;">
+                         <asp:ImageButton ID="ImageButton2" ClientIDMode="Static" runat="server" ImageUrl="../img/download.jpg"
+                                    Width="20" Height="20" Style="float: right; margin-top: -10px;" />
+                        <asp:TextBox ID="txtemailid" runat="server" Width="180px" Height="30px" placeholder="Please Enter your email"></asp:TextBox><br />
+                          <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtemailid"
+                            ErrorMessage="Email Required" ValidationGroup="btncontact" ForeColor="Red"></asp:RequiredFieldValidator><br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtemailid"
+                            ErrorMessage="Invalid Email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                            ValidationGroup="btnsend"></asp:RegularExpressionValidator>
+                        <asp:Button ID="btncontact" runat="server" Text="Send" CssClass="btn btn-success pull-left"
+                            ValidationGroup="btncontact" OnClick="btncontact_Click" />
+                    </div>
+            </div>                                  
+        </div>
+     </div>   
+     
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      </asp:ContentPlaceHolder> <br />      
+        
+            <div class="">              
+                <section>
+                  <ul class="inline text-center">
+                        <li class="">
+                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="badge" ForeColor="white" NavigateUrl="~/UI/About.aspx">About Us</asp:HyperLink></li>
+                        <li><a class="divider"></a></li>
+                        <li class="">
+                            <asp:HyperLink ID="HyperLink5" runat="server" CssClass="badge" ForeColor="white" NavigateUrl="~/UI/ContactUs.aspx">Contact Us</asp:HyperLink></li>
+                        <li><a class="divider"></a></li>
+                        <li class="">
+                            <asp:HyperLink ID="HyperLink6" runat="server" CssClass="badge" ForeColor="white" NavigateUrl="~/UI/Disclaimer.aspx">Disclaimer</asp:HyperLink></li>
+                        <li><a class="divider"></a></li>
+                    </ul>
+                    <p class="text-center muted">
+                        All Content and Intellectual Property is under Copyright Protection | sidza.com&copy;2017
+                    </p>
+                </section>
+             </div>        
+   
+  </form>
+</body>
+</html>

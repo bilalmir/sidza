@@ -1,0 +1,99 @@
+C:\Users\Mir Bilal\Documents\Visual Studio 2012\WebSites\Elearning System\Logic\bin\Logic.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2012\WebSites\Elearning System\Logic\bin\Logic.pdb
+C:\Users\Mir Bilal\Documents\Visual Studio 2012\WebSites\Elearning System\Logic\obj\Release\Logic.csprojResolveAssemblyReference.cache
+C:\Users\Mir Bilal\Documents\Visual Studio 2012\WebSites\Elearning System\Logic\obj\Release\Logic.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2012\WebSites\Elearning System\Logic\obj\Release\Logic.pdb
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\Logic.dll.config
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\Logic.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\Logic.pdb
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\BouncyCastle.Crypto.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\log4net.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\Newtonsoft.Json.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.Extensions.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.Primitives.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.WebRequest.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\Zlib.Portable.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\BouncyCastle.Crypto.pdb
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\log4net.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\Newtonsoft.Json.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.Extensions.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.Primitives.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\System.Net.Http.WebRequest.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\bin\Zlib.Portable.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\obj\Release\Logic.csproj.App.config
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\obj\Release\Logic.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\obj\Release\Logic.pdb
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\Elearning System\Logic\obj\Release\Logic.csprojResolveAssemblyReference.cache
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\Logic.dll.config
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\Logic.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\Logic.pdb
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\BouncyCastle.Crypto.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\log4net.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\Newtonsoft.Json.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.Extensions.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.Primitives.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.WebRequest.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\Zlib.Portable.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\BouncyCastle.Crypto.pdb
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\log4net.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\Newtonsoft.Json.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.Extensions.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.Primitives.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\System.Net.Http.WebRequest.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\bin\Zlib.Portable.xml
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\obj\Release\Logic.csproj.App.config
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\obj\Release\Logic.csprojResolveAssemblyReference.cache
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\obj\Release\Logic.dll
+C:\Users\Mir Bilal\Documents\Visual Studio 2013\WebSites\sidza\Logic\obj\Release\Logic.pdb
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\Logic.dll.config
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\Logic.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\Logic.pdb
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\BouncyCastle.Crypto.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\log4net.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\Newtonsoft.Json.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.Extensions.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.Primitives.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.WebRequest.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\Zlib.Portable.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\BouncyCastle.Crypto.pdb
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\log4net.xml
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\Newtonsoft.Json.xml
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.xml
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.Extensions.xml
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.Primitives.xml
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\System.Net.Http.WebRequest.xml
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\bin\Zlib.Portable.xml
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\obj\Release\Logic.csproj.App.config
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\obj\Release\Logic.csprojResolveAssemblyReference.cache
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\obj\Release\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\obj\Release\Logic.dll
+C:\Users\Mir bilal\Documents\Visual Studio 2017\WebSites\sidza\Logic\obj\Release\Logic.pdb
+E:\SDZ\sidza\Logic\bin\Logic.dll.config
+E:\SDZ\sidza\Logic\bin\Logic.dll
+E:\SDZ\sidza\Logic\bin\Logic.pdb
+E:\SDZ\sidza\Logic\bin\BouncyCastle.Crypto.dll
+E:\SDZ\sidza\Logic\bin\log4net.dll
+E:\SDZ\sidza\Logic\bin\Newtonsoft.Json.dll
+E:\SDZ\sidza\Logic\bin\System.Net.Http.dll
+E:\SDZ\sidza\Logic\bin\System.Net.Http.Extensions.dll
+E:\SDZ\sidza\Logic\bin\System.Net.Http.Primitives.dll
+E:\SDZ\sidza\Logic\bin\System.Net.Http.WebRequest.dll
+E:\SDZ\sidza\Logic\bin\Zlib.Portable.dll
+E:\SDZ\sidza\Logic\bin\BouncyCastle.Crypto.pdb
+E:\SDZ\sidza\Logic\bin\log4net.xml
+E:\SDZ\sidza\Logic\bin\Newtonsoft.Json.xml
+E:\SDZ\sidza\Logic\bin\System.Net.Http.xml
+E:\SDZ\sidza\Logic\bin\System.Net.Http.Extensions.xml
+E:\SDZ\sidza\Logic\bin\System.Net.Http.Primitives.xml
+E:\SDZ\sidza\Logic\bin\System.Net.Http.WebRequest.xml
+E:\SDZ\sidza\Logic\bin\Zlib.Portable.xml
+E:\SDZ\sidza\Logic\obj\Release\Logic.csproj.App.config
+E:\SDZ\sidza\Logic\obj\Release\Logic.csproj.CoreCompileInputs.cache
+E:\SDZ\sidza\Logic\obj\Release\Logic.dll
+E:\SDZ\sidza\Logic\obj\Release\Logic.pdb
+E:\SDZ\sidza\Logic\obj\Release\Logic.csprojResolveAssemblyReference.cache

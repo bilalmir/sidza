@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="VirtualClassroom_final.UI.Admin" %>
+<!DOCTYPE html>
+<html lang="en">
+    <head runat="server">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../Styles/bootstrap.min.css" media="screen"/>
+    <link rel="Stylesheet" href="../Styles/bootstrap-responsive.min.css" />
+   <script type="text/javascript" src="../Scripts/jquery-1.9.js"></script>    
+    <script type="text/javascript">
+        
+        $.ajaxPrefilter(function (options, original_Options, jqXHR) {
+            options.async = true;
+        });
+        
+    </script>
+     <script type="text/javascript">
+         //Check if the top location is same as the current location
+         if (top.location.hostname != self.location.hostname) {
+             //If not then set the top to you current
+             top.location.href = self.location.href;
+         }
+    </script>
+     <script type="text/javascript">
+         $(document).ready(function (event) {
+             $('#lnksetpaper').click(function (e) {
+                 if ($('#hdnadmininfo').val() == '') {
+                     alert("Please login to download content");
+                     return false;
+                 }
+             });
+         });
+    </script>
+  <%--   <script type="text/javascript">
+         $(document).ready(function () {
+             $('.danger').popover({
+                 html: true,
+                 content: function () {
+                     return $('#popover_content_wrapper').html();
+                 }
+             });
+         });
+    </script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div class="container-fluid"> 
+    <form id="form1" runat="server">
+    <div class="row">
+        <div class="col-md-12">
+        <asp:ScriptManager ID="script" runat="server"></asp:ScriptManager>
+      <nav class="navbar navbar-default navbar-fixed-top">    
+        <div class="navbar-collapse">      
+             <ul class="nav navbar-nav">
+                         <li><a href="AdminWelcome.aspx"><asp:Image ID="imglogo" runat="server" ImageUrl="~/img/logo.jpg" Height="80px"  CssClass="img-rounded" Width="100px" /></a></li>
+                         <li><asp:HyperLink ID="lnkhome" runat="server" NavigateUrl="~/Admin/AdminWelcome.aspx"><i class="glyphicon glyphicon-home" ></i>Home</asp:HyperLink></li>
+                         <li> <asp:HyperLink ID="lnkclass" runat="server" NavigateUrl="~/Admin/AddClass.aspx">Manage Classes</asp:HyperLink></li>                       
+                         <li><asp:HyperLink ID="lnksubject" runat="server" NavigateUrl="~/Admin/AddSubject.aspx">Manage Subjects</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnkChapter" runat="server" NavigateUrl="~/Admin/AddChapter.aspx">Manage Chapters</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnkTitle" runat="server" NavigateUrl="~/Admin/AddTitle.aspx">Manage Titles</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnkverify" runat="server" NavigateUrl="~/Admin/UploadMaterial.aspx">Upload Material</asp:HyperLink></li> 
+                         <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/UploadVideo.aspx">Upload Video</asp:HyperLink></li>                        
+                         <li><asp:HyperLink ID="lnkprivlgs" runat="server" NavigateUrl="~/Admin/Priviliges.aspx">User Priviliges</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnkactive" runat="server" NavigateUrl="~/Admin/ActiveUsers.aspx">Active Users</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnksetpaper" runat="server" NavigateUrl="~/Admin/SetObjectivePaper.aspx">Objective Questions</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnkblocked" runat="server" NavigateUrl="~/Admin/BlockedUsers.aspx" >Blocked Users</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnkuploadArticle" runat="server" NavigateUrl="~/Admin/UploadArticles.aspx">Article & NEWS</asp:HyperLink></li>
+                         <li><asp:HyperLink ID="lnkfeedback" runat="server" NavigateUrl="~/Admin/FeedBack.aspx">Feedback & Queries</asp:HyperLink></li>
+                         <li class="pull-right" style="padding-right:10px;"><asp:Button ID="btnlogout" runat="server" Text="Logout" CssClass="btn" Font-Bold="true" OnClick="btnlogout_Click"/></li>
+                    </ul>
+                   
+        </div>
+    </nav>        
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+             </div>
+         </div>
+    </form>
+    <script src="../Scripts/jquery-3.2.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+  </div>
+</body>
+</html>
