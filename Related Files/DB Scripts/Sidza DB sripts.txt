@@ -1,0 +1,14 @@
+copy images
+profile.png
+elearning.jpg
+alter table [user] add  board varchar(30),profileimage varchar(Max)
+alter table [user] add  teacherSubject varchar(30)
+alter table [user] drop column qualification
+alter table [user] add qualification1 nvarchar(50),qualification2 nvarchar(50),qualification3 nvarchar(50)
+
+
+
+
+
+
+

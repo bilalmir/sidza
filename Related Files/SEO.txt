@@ -1,0 +1,13 @@
+<meta name="title" content="Dotnet Tutorial" />  
+<meta name="author" content="Dotnet Tutorial" />  
+<meta name="Keywords" content="dot net, tutorial, .net, ASP.NET, WCF, WPF, Azure, ADO.NET, SQL, XML, Csharp, CSharp, C#, dotnet, interview, blog, tricks, tips" />  
+<meta name="description" content="Dot net Tutorial, .net interview question, asp.net tutorial, dotnet trick and tips, c# tutorial, .net articles, dotnet concept" />  
+<meta property="og:url" content="http://www.dotnet-tutorial.com/" />  
+<meta property="og:type" content="article" />  
+<meta property="og:title" content="Dotnet Tutorial" />  
+<meta property="og:description" content="Dot net Tutorial, .net interview question, asp.net tutorial, dotnet trick and tips, c# tutorial, .net articles, dotnet concept" />  
+<meta property="og:site_name" content="Dotnet Tutorial" />  
+<meta property="og:locale" content="en_US" />  
+<meta property="og:image" content="http://www.dotnet-tutorial.com/Content/Images/dotnettutorial.jpg" />  
+<meta property="article:author" content="https://www.facebook.com/mahi.aptech" />  
+<meta property="article:publisher" content="https://www.facebook.com/DotnetTutorialWorld" /> 

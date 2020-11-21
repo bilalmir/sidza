@@ -1,0 +1,35 @@
+USE [Elearning]
+GO
+
+/****** Object:  Table [dbo].[tblcomunication_teach_stu]    Script Date: 3/2/2019 4:30:36 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[tblcomunication_teach_stu](
+	[studentid] [int] IDENTITY(1,1) NOT NULL,
+	[studentname] [varchar](100) NOT NULL,
+	[email] [varchar](100) NOT NULL,
+	[contact] [bigint] NOT NULL,
+	[teachermessage] [varchar](max) NULL,
+	[studentmessage] [varchar](max) NULL,
+	[teacheremail] [varchar](100) NOT NULL,
+	[grade] [varchar](50) NOT NULL,
+	[emailflag] [bit] NOT NULL,
+ CONSTRAINT [PK_tblcomunication_teach_stu] PRIMARY KEY CLUSTERED 
+(
+	[studentid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
